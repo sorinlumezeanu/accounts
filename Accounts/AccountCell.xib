@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCellReuseIdentifier" id="SxU-fF-ajC" customClass="AccountCell" customModule="Accounts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SxU-fF-ajC" id="g5y-Fa-EW0">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-uc-rr8">
+                        <rect key="frame" x="20" y="8" width="335" height="27.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xfF-uc-rr8" firstAttribute="top" secondItem="g5y-Fa-EW0" secondAttribute="top" constant="8" id="XrM-ZA-2q2"/>
+                    <constraint firstAttribute="trailing" secondItem="xfF-uc-rr8" secondAttribute="trailing" constant="20" symbolic="YES" id="h20-kL-wsQ"/>
+                    <constraint firstItem="xfF-uc-rr8" firstAttribute="leading" secondItem="g5y-Fa-EW0" secondAttribute="leading" constant="20" symbolic="YES" id="jdq-sr-P90"/>
+                    <constraint firstAttribute="bottom" secondItem="xfF-uc-rr8" secondAttribute="bottom" constant="8" id="own-ui-Xre"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountIdentifierLabel" destination="xfF-uc-rr8" id="62H-xj-exP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

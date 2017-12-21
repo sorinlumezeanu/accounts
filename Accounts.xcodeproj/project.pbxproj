@@ -42,6 +42,9 @@
 		FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0F01FEBCCBA00022493 /* StandardErrorCellViewModel.swift */; };
 		FFD687441FEBD40A00E0A464 /* DataLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0F41FEBD07E00022493 /* DataLoadingCell.swift */; };
 		FFD687451FEBD40E00E0A464 /* DataLoadingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0F51FEBD07F00022493 /* DataLoadingCellViewModel.swift */; };
+		FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687471FEBD51D00E0A464 /* AccountCell.swift */; };
+		FFD6874A1FEBD56A00E0A464 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD687491FEBD56A00E0A464 /* AccountCell.xib */; };
+		FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */; };
 		FFD890151FEBD28E0053B274 /* DataLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +140,9 @@
 		FFCFE0F01FEBCCBA00022493 /* StandardErrorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardErrorCellViewModel.swift; sourceTree = "<group>"; };
 		FFCFE0F41FEBD07E00022493 /* DataLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingCell.swift; sourceTree = "<group>"; };
 		FFCFE0F51FEBD07F00022493 /* DataLoadingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingCellViewModel.swift; sourceTree = "<group>"; };
+		FFD687471FEBD51D00E0A464 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		FFD687491FEBD56A00E0A464 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
+		FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellViewModel.swift; sourceTree = "<group>"; };
 		FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,6 +345,7 @@
 		FFCFE0E41FEBA56600022493 /* Account List */ = {
 			isa = PBXGroup;
 			children = (
+				FFD687461FEBD4E800E0A464 /* Views */,
 				FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */,
 				FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */,
 			);
@@ -372,6 +379,16 @@
 				FFCFE0F51FEBD07F00022493 /* DataLoadingCellViewModel.swift */,
 			);
 			name = "Data Loading Cell";
+			sourceTree = "<group>";
+		};
+		FFD687461FEBD4E800E0A464 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFD687471FEBD51D00E0A464 /* AccountCell.swift */,
+				FFD687491FEBD56A00E0A464 /* AccountCell.xib */,
+				FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +525,7 @@
 				FF57CD311FEB86DD008B5D04 /* Assets.xcassets in Resources */,
 				FF57CD2F1FEB86DD008B5D04 /* Main.storyboard in Resources */,
 				FFD890151FEBD28E0053B274 /* DataLoadingCell.xib in Resources */,
+				FFD6874A1FEBD56A00E0A464 /* AccountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +566,7 @@
 				FFD687451FEBD40E00E0A464 /* DataLoadingCellViewModel.swift in Sources */,
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
 				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
+				FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */,
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
 				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
@@ -559,6 +578,7 @@
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
 				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
+				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
 				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
