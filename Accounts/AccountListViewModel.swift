@@ -32,6 +32,13 @@ class AccountListViewModel {
             }
         }
     }
+
+    enum RowType {
+        case loading(message: String)
+        case error(error: Error)
+        case noResults(message: String)
+        case account(account: Account)
+    }
     
     weak var delegate: AccountListViewModelDelegate?
     
@@ -40,15 +47,21 @@ class AccountListViewModel {
     private var accountTypes: [AccountType]?
     private var accountsByType: [AccountType: AccountsResponse]?
     
+    private var isAccountTypesRequestComplete = false
+    private var isAccountsRequestComplete = false
+    
     init(withFilterType filterType: FilterType, delegate: AccountListViewModelDelegate?) {
         self.filterType = filterType
         self.delegate = delegate
     }
     
     func fetchAccountTypes() {
+        self.isAccountTypesRequestComplete = false
+        
         let accountService: AccountServiceProtocol = ServiceProvider.resolve()
 
         accountService.fetchAccountTypes { [weak self] (accountTypes, error) in
+            self?.isAccountTypesRequestComplete = true
             self?.accountTypes = accountTypes
             
             if let _ = accountTypes {
@@ -61,10 +74,13 @@ class AccountListViewModel {
     }
     
     func fetchAccounts() {
+        self.isAccountsRequestComplete = false
+        
         let accountService: AccountServiceProtocol = ServiceProvider.resolve()
         let fetchingOptions = self.filterType.toAccountFetchingOptions()
         
         accountService.fetchAccounts(withOptions: fetchingOptions) { [weak self] (accountsByTypeResponse) in
+            self?.isAccountTypesRequestComplete = true
             self?.accountsByType = accountsByTypeResponse.accountsByType
             
             if let _ = accountsByTypeResponse.accountsByType {
@@ -79,31 +95,59 @@ class AccountListViewModel {
         return "Accounts"
     }
     
-    func numberOfSections() -> Int {
+    func numberOfAccountTypes() -> Int {
         return self.accountTypes?.count ?? 0
     }
     
-    func numberOfRows(forSection section: Int) -> Int {
-        guard let accountsByType = self.accountsByType else { return 0 }
-        guard let accountType = AccountType(rawValue: section) else { return 0 }
-        guard let accountsResponseForGivenType = accountsByType[accountType] else { return 0 }
+    func accountType(forSection section: Int) -> AccountType? {
+        guard let accountTypes = self.accountTypes else { return nil }
+        guard section >= 0 && section < accountTypes.count else { return nil }
         
-        if let accountsForGivenType = accountsResponseForGivenType.accounts {
-            return accountsForGivenType.count > 0
-                ? accountsForGivenType.count    // 1 row per Account
-                : 1                             // row saying "there are no accounts of this type"
+        return accountTypes[section]
+    }
+    
+    func numberOfRows(forSection section: Int) -> Int {
+        if self.isAccountsRequestComplete == false {
+            return 1        // row saying "loading..."
         } else {
-            return 1    // row saying "there was an error fetching Accounts of this type"
+            guard let accountsByType = self.accountsByType else { return 0 }
+            guard let accountType = AccountType(rawValue: section) else { return 0 }
+            guard let accountsResponseForGivenType = accountsByType[accountType] else { return 0 }
+            
+            if let accountsForGivenType = accountsResponseForGivenType.accounts {
+                return accountsForGivenType.count > 0
+                    ? accountsForGivenType.count            // 1 row per Account
+                    : 1                                     // row saying "there are no accounts of this type"
+            } else {
+                return 1    // row saying "there was an error fetching Accounts of this type"
+            }
         }
     }
     
-    func account(for indexPath: IndexPath) -> Account? {
-        guard let accountsByType = self.accountsByType else { return nil }
-        guard let accountType = AccountType(rawValue: indexPath.section) else { return nil }
-        guard let accountsResponseForGivenType = accountsByType[accountType] else { return nil }
-        guard let accountsForGivenType = accountsResponseForGivenType.accounts else { return nil }
-        guard indexPath.row >= 0 && indexPath.row < accountsForGivenType.count else { return nil }
+    
+    func rowType(forIndexPath indexPath: IndexPath) -> RowType? {
+        if self.isAccountsRequestComplete == false {
+            return .loading(message: "Loading...")
+        } else {
+            guard let accountsByType = self.accountsByType else { return nil }
+            guard let accountType = AccountType(rawValue: indexPath.section) else { return nil }
+            guard let accountsResponseForGivenType = accountsByType[accountType] else { return nil }
 
-        return accountsForGivenType[indexPath.row]
+            if let accountsForGivenType = accountsResponseForGivenType.accounts {
+                if accountsForGivenType.count > 0 {
+                    guard indexPath.row >= 0 && indexPath.row < accountsForGivenType.count else { return nil }
+                    
+                    return .account(account: accountsForGivenType[indexPath.row])
+                } else {
+                    return .noResults(message: "There are no accounts for this account type")
+                }
+            } else {
+                if let error = accountsResponseForGivenType.error {
+                    return .error(error: error)
+                } else {
+                    return .error(error: AccountError.unknown)
+                }
+            }
+        }
     }
 }

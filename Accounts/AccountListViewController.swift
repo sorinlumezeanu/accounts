@@ -21,6 +21,10 @@ class AccountListViewController: UIViewController {
         
         self.navigationItem.title = self.viewModel.screenTitle()
         
+        self.accountsTableView.register(StandardErrorCell.nib, forCellReuseIdentifier: StandardErrorCell.reuseIdentifier)
+        self.accountsTableView.register(DataLoadingCell.nib, forCellReuseIdentifier: DataLoadingCell.reuseIdentifier)
+        self.accountsTableView.register(AccountCell.nib, forCellReuseIdentifier: AccountCell.reuseIdentifier)
+        
         self.accountsTableView.dataSource = self
         self.accountsTableView.delegate = self
     }
@@ -61,7 +65,7 @@ extension AccountListViewController: AccountListViewModelDelegate {
 extension AccountListViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.numberOfSections()
+        return self.viewModel.numberOfAccountTypes()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +73,27 @@ extension AccountListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        fatalError("not implemented")
+        guard let rowType = self.viewModel.rowType(forIndexPath: indexPath) else { return UITableViewCell() }
+        
+        switch rowType {
+        case .loading(let loadingMessage):
+            let cell = self.accountsTableView.dequeueReusableCell(withIdentifier: DataLoadingCell.reuseIdentifier) as! DataLoadingCell
+            cell.configure(with: DataLoadingCellViewModel(withLoadingMessage: loadingMessage))
+            return cell
+            
+        case .error(let error):
+            let cell = self.accountsTableView.dequeueReusableCell(withIdentifier: StandardErrorCell.reuseIdentifier) as! StandardErrorCell
+            cell.configure(with: StandardErrorCellViewModel(withError: error))
+            return cell
+            
+        case .noResults(let message):
+            return UITableViewCell()
+
+        case .account(let account):
+            let cell = self.accountsTableView.dequeueReusableCell(withIdentifier: AccountCell.reuseIdentifier) as! AccountCell
+            cell.configure(with: AccountCellViewModel(withAccount: account))
+            return cell
+        }
     }
 }
 

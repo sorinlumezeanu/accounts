@@ -45,6 +45,7 @@
 		FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687471FEBD51D00E0A464 /* AccountCell.swift */; };
 		FFD6874A1FEBD56A00E0A464 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD687491FEBD56A00E0A464 /* AccountCell.xib */; };
 		FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */; };
+		FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */; };
 		FFD890151FEBD28E0053B274 /* DataLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,7 @@
 		FFD687471FEBD51D00E0A464 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		FFD687491FEBD56A00E0A464 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellViewModel.swift; sourceTree = "<group>"; };
+		FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountError.swift; sourceTree = "<group>"; };
 		FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +336,7 @@
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */,
 				FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */,
 				FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */,
 				FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */,
@@ -576,6 +579,7 @@
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
 				FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */,
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
+				FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */,
 				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
 				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
