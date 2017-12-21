@@ -55,6 +55,10 @@ class AccountListViewModel {
         self.delegate = delegate
     }
     
+    func startFetchingData() {
+        self.fetchAccountTypes()
+    }
+    
     func fetchAccountTypes() {
         self.isAccountTypesRequestComplete = false
         
@@ -80,7 +84,7 @@ class AccountListViewModel {
         let fetchingOptions = self.filterType.toAccountFetchingOptions()
         
         accountService.fetchAccounts(withOptions: fetchingOptions) { [weak self] (accountsByTypeResponse) in
-            self?.isAccountTypesRequestComplete = true
+            self?.isAccountsRequestComplete = true
             self?.accountsByType = accountsByTypeResponse.accountsByType
             
             if let _ = accountsByTypeResponse.accountsByType {

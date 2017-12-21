@@ -10,35 +10,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataLoadingCellReuseIdentifier" id="UIZ-gw-CVu" customClass="DataLoadingCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DataLoadingCellReuseIdentifier" id="E2A-y0-aBn" customClass="DataLoadingCell" customModule="Accounts" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UIZ-gw-CVu" id="9Zy-Kf-U6P">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E2A-y0-aBn" id="YFU-Mb-CwE">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTR-Yw-04F">
-                        <rect key="frame" x="20" y="8" width="149" height="27.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kna-zp-f9z">
+                        <rect key="frame" x="177" y="11" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-HQ-3eX">
+                        <rect key="frame" x="8" y="11" width="161" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="R6T-62-ShK">
-                        <rect key="frame" x="177" y="12" width="20" height="20"/>
-                    </activityIndicatorView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="R6T-62-ShK" firstAttribute="leading" secondItem="bTR-Yw-04F" secondAttribute="trailing" constant="8" symbolic="YES" id="286-w1-aE6"/>
-                    <constraint firstItem="R6T-62-ShK" firstAttribute="centerY" secondItem="9Zy-Kf-U6P" secondAttribute="centerY" id="Cv9-3A-KcV"/>
-                    <constraint firstItem="bTR-Yw-04F" firstAttribute="top" secondItem="9Zy-Kf-U6P" secondAttribute="top" constant="8" id="NBA-oj-v6f"/>
-                    <constraint firstAttribute="bottom" secondItem="bTR-Yw-04F" secondAttribute="bottom" constant="8" id="OzN-ep-WeJ"/>
-                    <constraint firstItem="R6T-62-ShK" firstAttribute="centerX" secondItem="9Zy-Kf-U6P" secondAttribute="centerX" id="XWl-Kb-5Le"/>
-                    <constraint firstItem="bTR-Yw-04F" firstAttribute="leading" secondItem="9Zy-Kf-U6P" secondAttribute="leading" constant="20" symbolic="YES" id="Xup-xP-iRO"/>
+                    <constraint firstItem="Kna-zp-f9z" firstAttribute="leading" secondItem="W6Q-HQ-3eX" secondAttribute="trailing" constant="8" symbolic="YES" id="I75-2O-oHq"/>
+                    <constraint firstItem="Kna-zp-f9z" firstAttribute="centerX" secondItem="YFU-Mb-CwE" secondAttribute="centerX" id="N9J-oc-cIB"/>
+                    <constraint firstItem="W6Q-HQ-3eX" firstAttribute="centerY" secondItem="YFU-Mb-CwE" secondAttribute="centerY" id="XHb-5h-Fve"/>
+                    <constraint firstItem="Kna-zp-f9z" firstAttribute="centerY" secondItem="YFU-Mb-CwE" secondAttribute="centerY" id="XUN-uj-Y93"/>
+                    <constraint firstItem="W6Q-HQ-3eX" firstAttribute="leading" secondItem="YFU-Mb-CwE" secondAttribute="leading" constant="8" id="eMV-oL-xCO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="activityIndicator" destination="R6T-62-ShK" id="BdS-qI-zga"/>
-                <outlet property="loadingMessageLabel" destination="bTR-Yw-04F" id="gbv-xQ-mLo"/>
+                <outlet property="activityIndicator" destination="Kna-zp-f9z" id="WaX-KE-R5L"/>
+                <outlet property="loadingMessageLabel" destination="W6Q-HQ-3eX" id="Y2m-mD-caX"/>
             </connections>
         </tableViewCell>
     </objects>

@@ -25,9 +25,12 @@ class AccountListViewController: UIViewController {
         self.accountsTableView.register(DataLoadingCell.nib, forCellReuseIdentifier: DataLoadingCell.reuseIdentifier)
         self.accountsTableView.register(AccountCell.nib, forCellReuseIdentifier: AccountCell.reuseIdentifier)
         self.accountsTableView.register(NoResultsCell.nib, forCellReuseIdentifier: NoResultsCell.reuseIdentifier)
+        self.accountsTableView.register(AccountTypeHeaderView.nib, forHeaderFooterViewReuseIdentifier: AccountTypeHeaderView.reuseIdentifier)
         
         self.accountsTableView.dataSource = self
         self.accountsTableView.delegate = self
+        
+        self.viewModel.startFetchingData()
     }
     
     
@@ -35,8 +38,12 @@ class AccountListViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             self.viewModel = AccountListViewModel(withFilterType: .showAll, delegate: self)
+            self.accountsTableView.reloadData()
+            self.viewModel.startFetchingData()
         case 1:
             self.viewModel = AccountListViewModel(withFilterType: .showOnlyVisible, delegate: self)
+            self.accountsTableView.reloadData()
+            self.viewModel.startFetchingData()
         default:
             break
         }
@@ -97,6 +104,20 @@ extension AccountListViewController: UITableViewDataSource {
             cell.configure(with: AccountCellViewModel(withAccount: account))
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let _ = self.viewModel.accountType(forSection: section) else { return 0 }
+        
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let accountType = self.viewModel.accountType(forSection: section) else { return nil }
+        
+        let headerView = self.accountsTableView.dequeueReusableHeaderFooterView(withIdentifier: AccountTypeHeaderView.reuseIdentifier) as! AccountTypeHeaderView
+        headerView.configure(with: AccountTypeHeaderViewModel(withAccountType: accountType))
+        return headerView
     }
 }
 

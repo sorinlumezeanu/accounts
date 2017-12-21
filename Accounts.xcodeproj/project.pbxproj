@@ -49,7 +49,10 @@
 		FFD687511FEBE1AB00E0A464 /* NoResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687501FEBE1AB00E0A464 /* NoResultsCell.swift */; };
 		FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687521FEBE1EC00E0A464 /* NoResultsCellViewModel.swift */; };
 		FFD687551FEBE23300E0A464 /* NoResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD687541FEBE23300E0A464 /* NoResultsCell.xib */; };
-		FFD890151FEBD28E0053B274 /* DataLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */; };
+		FFD687571FEBE34F00E0A464 /* AccountTypeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687561FEBE34F00E0A464 /* AccountTypeHeaderView.swift */; };
+		FFD687591FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687581FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift */; };
+		FFD6875B1FEBE46000E0A464 /* AccountTypeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD6875A1FEBE46000E0A464 /* AccountTypeHeaderView.xib */; };
+		FFD6875D1FEBEBF300E0A464 /* DataLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD6875C1FEBEBF300E0A464 /* DataLoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +154,10 @@
 		FFD687501FEBE1AB00E0A464 /* NoResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsCell.swift; sourceTree = "<group>"; };
 		FFD687521FEBE1EC00E0A464 /* NoResultsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsCellViewModel.swift; sourceTree = "<group>"; };
 		FFD687541FEBE23300E0A464 /* NoResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultsCell.xib; sourceTree = "<group>"; };
-		FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLoadingCell.xib; sourceTree = "<group>"; };
+		FFD687561FEBE34F00E0A464 /* AccountTypeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeHeaderView.swift; sourceTree = "<group>"; };
+		FFD687581FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeHeaderViewModel.swift; sourceTree = "<group>"; };
+		FFD6875A1FEBE46000E0A464 /* AccountTypeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTypeHeaderView.xib; sourceTree = "<group>"; };
+		FFD6875C1FEBEBF300E0A464 /* DataLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,8 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				FFCFE0F41FEBD07E00022493 /* DataLoadingCell.swift */,
-				FFD890141FEBD28E0053B274 /* DataLoadingCell.xib */,
 				FFCFE0F51FEBD07F00022493 /* DataLoadingCellViewModel.swift */,
+				FFD6875C1FEBEBF300E0A464 /* DataLoadingCell.xib */,
 			);
 			name = "Data Loading Cell";
 			sourceTree = "<group>";
@@ -397,6 +403,9 @@
 				FFD687471FEBD51D00E0A464 /* AccountCell.swift */,
 				FFD687491FEBD56A00E0A464 /* AccountCell.xib */,
 				FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */,
+				FFD687561FEBE34F00E0A464 /* AccountTypeHeaderView.swift */,
+				FFD6875A1FEBE46000E0A464 /* AccountTypeHeaderView.xib */,
+				FFD687581FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -544,8 +553,9 @@
 				FFCFE0EF1FEBCBF600022493 /* StandardErrorCell.xib in Resources */,
 				FF57CD311FEB86DD008B5D04 /* Assets.xcassets in Resources */,
 				FFD687551FEBE23300E0A464 /* NoResultsCell.xib in Resources */,
+				FFD6875D1FEBEBF300E0A464 /* DataLoadingCell.xib in Resources */,
 				FF57CD2F1FEB86DD008B5D04 /* Main.storyboard in Resources */,
-				FFD890151FEBD28E0053B274 /* DataLoadingCell.xib in Resources */,
+				FFD6875B1FEBE46000E0A464 /* AccountTypeHeaderView.xib in Resources */,
 				FFD6874A1FEBD56A00E0A464 /* AccountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +596,7 @@
 				FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */,
 				FFD687451FEBD40E00E0A464 /* DataLoadingCellViewModel.swift in Sources */,
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
+				FFD687571FEBE34F00E0A464 /* AccountTypeHeaderView.swift in Sources */,
 				FFD687511FEBE1AB00E0A464 /* NoResultsCell.swift in Sources */,
 				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
 				FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */,
@@ -596,6 +607,7 @@
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
 				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
+				FFD687591FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift in Sources */,
 				FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */,
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */,
