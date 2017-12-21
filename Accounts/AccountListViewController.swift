@@ -24,6 +24,7 @@ class AccountListViewController: UIViewController {
         self.accountsTableView.register(StandardErrorCell.nib, forCellReuseIdentifier: StandardErrorCell.reuseIdentifier)
         self.accountsTableView.register(DataLoadingCell.nib, forCellReuseIdentifier: DataLoadingCell.reuseIdentifier)
         self.accountsTableView.register(AccountCell.nib, forCellReuseIdentifier: AccountCell.reuseIdentifier)
+        self.accountsTableView.register(NoResultsCell.nib, forCellReuseIdentifier: NoResultsCell.reuseIdentifier)
         
         self.accountsTableView.dataSource = self
         self.accountsTableView.delegate = self
@@ -87,7 +88,9 @@ extension AccountListViewController: UITableViewDataSource {
             return cell
             
         case .noResults(let message):
-            return UITableViewCell()
+            let cell = self.accountsTableView.dequeueReusableCell(withIdentifier: NoResultsCell.reuseIdentifier) as! NoResultsCell
+            cell.configure(with: NoResultsCellViewModel(withMessage: message))
+            return cell
 
         case .account(let account):
             let cell = self.accountsTableView.dequeueReusableCell(withIdentifier: AccountCell.reuseIdentifier) as! AccountCell
