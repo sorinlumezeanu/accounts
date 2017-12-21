@@ -8,10 +8,23 @@
 
 import Foundation
 
-enum AccountType: Int {
-    case payment = 0
+enum AccountType: CustomStringConvertible {
+    case payment
     case savings
     case creditCard
     
     static let allValues: [AccountType] = [.payment, .savings, .creditCard]
+    
+    var description: String {
+        get {
+            switch self {
+            case .payment:
+                return "Payment"
+            case .savings:
+                return "Savings"
+            case .creditCard:
+                return "Credit Card"
+            }
+        }
+    }
 }

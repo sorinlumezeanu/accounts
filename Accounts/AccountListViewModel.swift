@@ -114,8 +114,8 @@ class AccountListViewModel {
         if self.isAccountsRequestComplete == false {
             return 1        // row saying "loading..."
         } else {
+            guard let accountType = self.accountType(forSection: section) else { return 0 }
             guard let accountsByType = self.accountsByType else { return 0 }
-            guard let accountType = AccountType(rawValue: section) else { return 0 }
             guard let accountsResponseForGivenType = accountsByType[accountType] else { return 0 }
             
             if let accountsForGivenType = accountsResponseForGivenType.accounts {
@@ -133,8 +133,8 @@ class AccountListViewModel {
         if self.isAccountsRequestComplete == false {
             return .loading(message: "Loading...")
         } else {
+            guard let accountType = self.accountType(forSection: indexPath.section) else { return nil }
             guard let accountsByType = self.accountsByType else { return nil }
-            guard let accountType = AccountType(rawValue: indexPath.section) else { return nil }
             guard let accountsResponseForGivenType = accountsByType[accountType] else { return nil }
 
             if let accountsForGivenType = accountsResponseForGivenType.accounts {
@@ -154,4 +154,6 @@ class AccountListViewModel {
             }
         }
     }
+    
+    
 }

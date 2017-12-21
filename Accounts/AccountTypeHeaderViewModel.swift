@@ -18,7 +18,7 @@ class AccountTypeHeaderViewModel {
     
     var accountTypeDisplayText: String {
         get {
-            return "not yet implemented"
+            return self.accountType.description + " Accounts"
         }
     }
 }
