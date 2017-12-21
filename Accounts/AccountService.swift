@@ -10,7 +10,11 @@ import Foundation
 
 class AccountService: AccountServiceProtocol {
     
-    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
+    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: Error?) -> Void) {
+        completion(AccountType.allValues, nil)
+    }
+    
+    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
         fatalError("not implemented")
     }
 }

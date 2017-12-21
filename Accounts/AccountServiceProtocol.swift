@@ -8,6 +8,10 @@
 
 import Foundation
 
+typealias AccountsResponse = (accounts: [Account]?, error: Error?)
+typealias AccountsByTypeResponse = (accountsByType: [AccountType: AccountsResponse]?, error: Error?)
+
 protocol AccountServiceProtocol: Service {
-    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void)
+    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: Error?) -> Void)
+    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void)
 }

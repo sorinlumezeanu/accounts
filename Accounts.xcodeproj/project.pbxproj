@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */; };
-		FF57CD2C1FEB86DD008B5D04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */; };
 		FF57CD2F1FEB86DD008B5D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD2D1FEB86DD008B5D04 /* Main.storyboard */; };
 		FF57CD311FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD301FEB86DD008B5D04 /* Assets.xcassets */; };
 		FF57CD341FEB86DD008B5D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD321FEB86DD008B5D04 /* LaunchScreen.storyboard */; };
@@ -92,7 +91,6 @@
 /* Begin PBXFileReference section */
 		FF57CD261FEB86DD008B5D04 /* Accounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF57CD2E1FEB86DD008B5D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF57CD301FEB86DD008B5D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57CD331FEB86DD008B5D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				FFCFE0E41FEBA56600022493 /* Account List */,
-				FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -505,7 +502,6 @@
 				FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */,
 				FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */,
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
-				FF57CD2C1FEB86DD008B5D04 /* ViewController.swift in Sources */,
 				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,

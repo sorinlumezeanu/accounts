@@ -10,28 +10,40 @@ import Foundation
 
 class AccountServiceMock: AccountServiceProtocol {
     
-    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
-        var accounts = [Account]()
+    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: Error?) -> Void) {
+        completion(AccountType.allValues, nil)
+    }
+    
+    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
         
-        var account = PaymentAccount()
-        account.id = 748757694
-        account.name = "Hr P L G N StellingTD"
-        account.number = "\(748757694)"
-        account.balanceInCents = 985000
-        account.currency = .EUR
-        account.isVisible = true
-        account.iban = "NL23INGB0748757694"
-        accounts.append(account)
+        var accountsByType = [AccountType: AccountsResponse]()
         
-        account = PaymentAccount()
-        account.id = 700000027559
-        account.name = ","
-        account.number = "\(748757732)"
-        account.balanceInCents = 1000000
-        account.currency = .EUR
-        account.isVisible = false
-        account.iban = "NL88INGB0748757732"
-        accounts.append(account)
+        var paymentAccounts = [Account]()
+        
+        var paymentAccount = PaymentAccount()
+        paymentAccount.id = 748757694
+        paymentAccount.name = "Hr P L G N StellingTD"
+        paymentAccount.number = "\(748757694)"
+        paymentAccount.balanceInCents = 985000
+        paymentAccount.currency = .EUR
+        paymentAccount.isVisible = true
+        paymentAccount.iban = "NL23INGB0748757694"
+        paymentAccounts.append(paymentAccount)
+        
+        paymentAccount = PaymentAccount()
+        paymentAccount.id = 700000027559
+        paymentAccount.name = ","
+        paymentAccount.number = "\(748757732)"
+        paymentAccount.balanceInCents = 1000000
+        paymentAccount.currency = .EUR
+        paymentAccount.isVisible = false
+        paymentAccount.iban = "NL88INGB0748757732"
+        paymentAccounts.append(paymentAccount)
+        
+        let filteredPaymentAccounts = (fetchingOptions == .onlyVisible)
+            ? paymentAccounts.filter { $0.isVisible == true }
+            : paymentAccounts
+        accountsByType[.payment] = AccountsResponse(accounts: filteredPaymentAccounts, error: nil)
 
         let savingsAccount = SavingsAccount()
         savingsAccount.id = 700000027559
@@ -47,16 +59,17 @@ class AccountServiceMock: AccountServiceProtocol {
         savingsAccount.product = Product()
         savingsAccount.product?.type = .standardSavings
         savingsAccount.product?.name = "Oranje Spaarrekening"
-        savingsAccount.linkedAccount = accounts.first { $0.id == 748757694 }
-        accounts.append(savingsAccount)
-
-        DispatchQueue.global(qos: .userInitiated).async {
-            switch fetchingOptions {
-            case .all:
-                completion(accounts, nil)
-            case .onlyVisible:
-                completion(accounts.filter { $0.isVisible == true }, nil)
-            }
-        }        
+        savingsAccount.linkedAccount = paymentAccounts.first { $0.id == 748757694 }
+        
+        let savingsAccounts: [Account] = [savingsAccount]
+        let filteredSavingsAccount = (fetchingOptions == .onlyVisible)
+            ? savingsAccounts.filter { $0.isVisible == true }
+            : savingsAccounts
+        accountsByType[.savings] = AccountsResponse(accounts: filteredSavingsAccount, error: nil)
+        
+        
+        accountsByType[.creditCard] = AccountsResponse(accounts: nil, error: nil)
+        
+        completion(AccountsByTypeResponse(accountsByType: accountsByType, error: nil))
     }
 }

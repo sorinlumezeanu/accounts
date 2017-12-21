@@ -8,8 +8,10 @@
 
 import Foundation
 
-enum AccountType {
-    case payment
+enum AccountType: Int {
+    case payment = 0
     case savings
     case creditCard
+    
+    static let allValues: [AccountType] = [.payment, .savings, .creditCard]
 }
