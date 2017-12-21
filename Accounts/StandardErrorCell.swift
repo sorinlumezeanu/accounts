@@ -25,5 +25,7 @@ class StandardErrorCell: UITableViewCell {
     
     override func prepareForReuse() {
         self.viewModel = nil
+        
+        self.errorLabel.text = nil
     }
 }
