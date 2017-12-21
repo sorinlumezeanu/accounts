@@ -37,6 +37,9 @@
 		FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */; };
 		FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */; };
 		FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */; };
+		FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0EC1FEBCBA900022493 /* StandardErrorCell.swift */; };
+		FFCFE0EF1FEBCBF600022493 /* StandardErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCFE0EE1FEBCBF600022493 /* StandardErrorCell.xib */; };
+		FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0F01FEBCCBA00022493 /* StandardErrorCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,9 @@
 		FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
 		FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetchingOptions.swift; sourceTree = "<group>"; };
+		FFCFE0EC1FEBCBA900022493 /* StandardErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardErrorCell.swift; sourceTree = "<group>"; };
+		FFCFE0EE1FEBCBF600022493 /* StandardErrorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardErrorCell.xib; sourceTree = "<group>"; };
+		FFCFE0F01FEBCCBA00022493 /* StandardErrorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardErrorCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +281,7 @@
 		FF57CD771FEB8877008B5D04 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FFCFE0EB1FEBCB9300022493 /* Common */,
 				FFCFE0E41FEBA56600022493 /* Account List */,
 			);
 			name = Scenes;
@@ -330,6 +337,16 @@
 				FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */,
 			);
 			name = "Account List";
+			sourceTree = "<group>";
+		};
+		FFCFE0EB1FEBCB9300022493 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFCFE0EC1FEBCBA900022493 /* StandardErrorCell.swift */,
+				FFCFE0EE1FEBCBF600022493 /* StandardErrorCell.xib */,
+				FFCFE0F01FEBCCBA00022493 /* StandardErrorCellViewModel.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF57CD341FEB86DD008B5D04 /* LaunchScreen.storyboard in Resources */,
+				FFCFE0EF1FEBCBF600022493 /* StandardErrorCell.xib in Resources */,
 				FF57CD311FEB86DD008B5D04 /* Assets.xcassets in Resources */,
 				FF57CD2F1FEB86DD008B5D04 /* Main.storyboard in Resources */,
 			);
@@ -510,11 +528,13 @@
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
 				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
+				FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */,
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
 				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
 				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
+				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
 				FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
