@@ -21,6 +21,15 @@
 		FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */; };
 		FF57CD5C1FEB86DD008B5D04 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */; };
 		FF57CD5E1FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */; };
+		FF7E3B731FEB8EA800081E5B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B721FEB8EA800081E5B /* Currency.swift */; };
+		FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B741FEB8ECC00081E5B /* Account.swift */; };
+		FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
+		FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
+		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
+		FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7E1FEB990900081E5B /* AccountBase.swift */; };
+		FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B801FEB992000081E5B /* PaymentAccount.swift */; };
+		FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */; };
+		FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +103,15 @@
 		FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57CD5F1FEB86DD008B5D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FF7E3B721FEB8EA800081E5B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FF7E3B741FEB8ECC00081E5B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		FF7E3B761FEB8F3300081E5B /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
+		FF7E3B781FEB906700081E5B /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		FF7E3B7A1FEB90FD00081E5B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FF7E3B7E1FEB990900081E5B /* AccountBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBase.swift; sourceTree = "<group>"; };
+		FF7E3B801FEB992000081E5B /* PaymentAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccount.swift; sourceTree = "<group>"; };
+		FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsAccount.swift; sourceTree = "<group>"; };
+		FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,8 +266,33 @@
 		FF7E3B711FEB88AE00081E5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FF7E3B7D1FEB98F000081E5B /* Product */,
+				FF7E3B7C1FEB98E500081E5B /* Account */,
+				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FF7E3B7C1FEB98E500081E5B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
+				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
+				FF7E3B7E1FEB990900081E5B /* AccountBase.swift */,
+				FF7E3B801FEB992000081E5B /* PaymentAccount.swift */,
+				FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */,
+				FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		FF7E3B7D1FEB98F000081E5B /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FF7E3B781FEB906700081E5B /* ProductType.swift */,
+				FF7E3B7A1FEB90FD00081E5B /* Product.swift */,
+			);
+			name = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +461,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF7E3B731FEB8EA800081E5B /* Currency.swift in Sources */,
+				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
 				FF57CD2C1FEB86DD008B5D04 /* ViewController.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
+				FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */,
+				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
+				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
+				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
+				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
+				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,
+				FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
