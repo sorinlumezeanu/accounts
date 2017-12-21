@@ -35,6 +35,9 @@
 		FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
 		FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */; };
 		FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */; };
+		FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */; };
+		FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */; };
+		FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		FFCFE0DE1FEB9BAF00022493 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceMock.swift; sourceTree = "<group>"; };
+		FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetchingOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +277,7 @@
 		FF57CD771FEB8877008B5D04 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FFCFE0E41FEBA56600022493 /* Account List */,
 				FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */,
 			);
 			name = Scenes;
@@ -311,11 +318,21 @@
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */,
 				FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */,
 				FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */,
 				FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */,
 			);
 			name = Account;
+			sourceTree = "<group>";
+		};
+		FFCFE0E41FEBA56600022493 /* Account List */ = {
+			isa = PBXGroup;
+			children = (
+				FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */,
+				FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */,
+			);
+			name = "Account List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,9 +503,11 @@
 			files = (
 				FF7E3B731FEB8EA800081E5B /* Currency.swift in Sources */,
 				FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */,
+				FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */,
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
 				FF57CD2C1FEB86DD008B5D04 /* ViewController.swift in Sources */,
 				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
+				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
 				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
 				FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */,
@@ -499,6 +518,7 @@
 				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
 				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
 				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,
+				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

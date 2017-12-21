@@ -10,7 +10,7 @@ import Foundation
 
 class AccountServiceMock: AccountServiceProtocol {
     
-    func fetchAccounts(completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
+    func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
         var accounts = [Account]()
         
         var account = PaymentAccount()
@@ -47,10 +47,16 @@ class AccountServiceMock: AccountServiceProtocol {
         savingsAccount.product = Product()
         savingsAccount.product?.type = .standardSavings
         savingsAccount.product?.name = "Oranje Spaarrekening"
+        savingsAccount.linkedAccount = accounts.first { $0.id == 748757694 }
         accounts.append(savingsAccount)
 
         DispatchQueue.global(qos: .userInitiated).async {
-            completion(accounts, nil)
+            switch fetchingOptions {
+            case .all:
+                completion(accounts, nil)
+            case .onlyVisible:
+                completion(accounts.filter { $0.isVisible == true }, nil)
+            }
         }        
     }
 }
