@@ -1,5 +1,5 @@
 //
-//  ProductType.swift
+//  Service.swift
 //  Accounts
 //
 //  Created by Sorin Lumezeanu on 21/12/2017.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-enum ProductType: Int {
-    case standardSavings = 1000
+protocol Service {      // marker protocol
     
-    // add future product types here
 }

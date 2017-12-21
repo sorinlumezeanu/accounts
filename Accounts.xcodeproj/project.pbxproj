@@ -30,6 +30,11 @@
 		FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B801FEB992000081E5B /* PaymentAccount.swift */; };
 		FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */; };
 		FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */; };
+		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
+		FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
+		FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
+		FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */; };
+		FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,11 @@
 		FF7E3B801FEB992000081E5B /* PaymentAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccount.swift; sourceTree = "<group>"; };
 		FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsAccount.swift; sourceTree = "<group>"; };
 		FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
+		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
+		FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		FFCFE0DE1FEB9BAF00022493 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,8 +216,8 @@
 		FF57CD711FEB8819008B5D04 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FF57CD721FEB8825008B5D04 /* Services */,
 				FF57CD731FEB882D008B5D04 /* Resources */,
+				FF57CD721FEB8825008B5D04 /* Services */,
 				FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */,
 			);
 			name = Application;
@@ -216,6 +226,9 @@
 		FF57CD721FEB8825008B5D04 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FFCFE0D91FEB9ABC00022493 /* Account */,
+				FFCFE0DE1FEB9BAF00022493 /* Service.swift */,
+				FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -293,6 +306,16 @@
 				FF7E3B7A1FEB90FD00081E5B /* Product.swift */,
 			);
 			name = Product;
+			sourceTree = "<group>";
+		};
+		FFCFE0D91FEB9ABC00022493 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */,
+				FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */,
+				FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */,
+			);
+			name = Account;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,12 +485,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7E3B731FEB8EA800081E5B /* Currency.swift in Sources */,
+				FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */,
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
 				FF57CD2C1FEB86DD008B5D04 /* ViewController.swift in Sources */,
+				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
+				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
 				FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */,
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
 				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
+				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
+				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
 				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
 				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,

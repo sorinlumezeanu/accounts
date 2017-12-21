@@ -8,15 +8,15 @@
 
 import Foundation
 
-class AccountBase {    
+class AccountBase {
+    
     var id: Int?
-    
-    var balanceInCents: Int?
-    var currency: Currency?
-    
     var name: String?
     var alias: String?
-    var number: Int?
+    var number: String?
+
+    var balanceInCents: Int?
+    var currency: Currency?
     
     var iban: String?
     

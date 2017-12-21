@@ -15,7 +15,7 @@ protocol Account {
     var currency: Currency? { get }
     
     var id: Int? { get }
-    var number: Int? { get }
+    var number: String? { get }
     var name: String? { get }
     var alias: String? { get set }
     
