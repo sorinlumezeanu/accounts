@@ -146,12 +146,9 @@
 		FF57CD281FEB86DD008B5D04 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
-				FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */,
-				FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */,
-				FF57CD2D1FEB86DD008B5D04 /* Main.storyboard */,
-				FF57CD301FEB86DD008B5D04 /* Assets.xcassets */,
-				FF57CD321FEB86DD008B5D04 /* LaunchScreen.storyboard */,
-				FF57CD351FEB86DD008B5D04 /* Info.plist */,
+				FF57CD711FEB8819008B5D04 /* Application */,
+				FF7E3B711FEB88AE00081E5B /* Model */,
+				FF57CD741FEB884B008B5D04 /* UI */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -186,6 +183,73 @@
 				FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */,
 			);
 			path = "Accounts WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FF57CD711FEB8819008B5D04 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD721FEB8825008B5D04 /* Services */,
+				FF57CD731FEB882D008B5D04 /* Resources */,
+				FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		FF57CD721FEB8825008B5D04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		FF57CD731FEB882D008B5D04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD301FEB86DD008B5D04 /* Assets.xcassets */,
+				FF57CD351FEB86DD008B5D04 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FF57CD741FEB884B008B5D04 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD761FEB8863008B5D04 /* Theme */,
+				FF57CD751FEB8851008B5D04 /* Storyboards */,
+				FF57CD771FEB8877008B5D04 /* Scenes */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FF57CD751FEB8851008B5D04 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD2D1FEB86DD008B5D04 /* Main.storyboard */,
+				FF57CD321FEB86DD008B5D04 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF57CD761FEB8863008B5D04 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		FF57CD771FEB8877008B5D04 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD2B1FEB86DD008B5D04 /* ViewController.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		FF7E3B711FEB88AE00081E5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
