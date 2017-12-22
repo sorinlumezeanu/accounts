@@ -17,7 +17,6 @@
 		FF57CD4A1FEB86DD008B5D04 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD481FEB86DD008B5D04 /* Interface.storyboard */; };
 		FF57CD4C1FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD4B1FEB86DD008B5D04 /* Assets.xcassets */; };
 		FF57CD531FEB86DD008B5D04 /* Accounts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FF57CD521FEB86DD008B5D04 /* Accounts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FF57CD581FEB86DD008B5D04 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD571FEB86DD008B5D04 /* InterfaceController.swift */; };
 		FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */; };
 		FF57CD5C1FEB86DD008B5D04 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */; };
 		FF57CD5E1FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */; };
@@ -39,6 +38,8 @@
 		FFC0168E1FED46E900100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
 		FFC0168F1FED470000100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
 		FFC016901FED470100100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
+		FFC016921FED4D1500100FAA /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016911FED4D1500100FAA /* AccountDTO.swift */; };
+		FFC016941FED4D5D00100FAA /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016911FED4D1500100FAA /* AccountDTO.swift */; };
 		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
 		FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
@@ -161,7 +162,6 @@
 		FF57CD4B1FEB86DD008B5D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57CD4D1FEB86DD008B5D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57CD521FEB86DD008B5D04 /* Accounts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Accounts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF57CD571FEB86DD008B5D04 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 		FFC0168A1FED461600100FAA /* Pods_Accounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Accounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC0168C1FED462100100FAA /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTOProtocol.swift; sourceTree = "<group>"; };
+		FFC016911FED4D1500100FAA /* AccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTO.swift; sourceTree = "<group>"; };
 		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsResponse.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
@@ -329,9 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				FFC0167C1FED436F00100FAA /* Auxiliary */,
-				FF57CD571FEB86DD008B5D04 /* InterfaceController.swift */,
-				FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */,
-				FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */,
 				FFC0167D1FED43A300100FAA /* AccountsInterfaceController.swift */,
 				FFC016871FED44C000100FAA /* AccountRowController.swift */,
 			);
@@ -414,9 +412,9 @@
 		FF7E3B7C1FEB98E500081E5B /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FFC016931FED4D1C00100FAA /* DTO */,
 				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
 				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
-				FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -442,11 +440,22 @@
 		FFC0167C1FED436F00100FAA /* Auxiliary */ = {
 			isa = PBXGroup;
 			children = (
+				FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */,
+				FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */,
 				FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */,
 				FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */,
 				FF57CD5F1FEB86DD008B5D04 /* Info.plist */,
 			);
 			name = Auxiliary;
+			sourceTree = "<group>";
+		};
+		FFC016931FED4D1C00100FAA /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */,
+				FFC016911FED4D1500100FAA /* AccountDTO.swift */,
+			);
+			name = DTO;
 			sourceTree = "<group>";
 		};
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
@@ -856,6 +865,7 @@
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
 				FFC0167B1FED2CB500100FAA /* AccountDetailsViewModel.swift in Sources */,
 				FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */,
+				FFC016921FED4D1500100FAA /* AccountDTO.swift in Sources */,
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
 				FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */,
@@ -904,9 +914,9 @@
 				FFC016881FED44C000100FAA /* AccountRowController.swift in Sources */,
 				FFC016831FED43FD00100FAA /* ProductType.swift in Sources */,
 				FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */,
-				FF57CD581FEB86DD008B5D04 /* InterfaceController.swift in Sources */,
 				FFC0167E1FED43A300100FAA /* AccountsInterfaceController.swift in Sources */,
 				FFC0168F1FED470000100FAA /* AccountDTOProtocol.swift in Sources */,
+				FFC016941FED4D5D00100FAA /* AccountDTO.swift in Sources */,
 				FFC016811FED43F100100FAA /* Currency.swift in Sources */,
 				FFC016841FED440000100FAA /* Product.swift in Sources */,
 				FFC016801FED43ED00100FAA /* ApplicationError.swift in Sources */,

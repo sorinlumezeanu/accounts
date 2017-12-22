@@ -18,6 +18,7 @@ class AccountsInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        self.accounts = self.mock()
         self.accountsTable.setNumberOfRows(accounts.count, withRowType: "AccountRow")
         
         for index in 0 ..< accountsTable.numberOfRows {
@@ -30,5 +31,18 @@ class AccountsInterfaceController: WKInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let account = self.accounts[rowIndex]
         self.presentController(withName: "Account", context: account)
+    }
+    
+    func mock() -> [AccountDTO] {
+        var a1 = AccountDTO()
+        a1.number = "unu"
+        a1.balanceInCents = 10000
+        
+        var a2 = AccountDTO()
+        a2.number = "doi"
+        a2.balanceInCents = 20000
+        
+        return [a1, a2, a1, a2, a1, a2, a1, a2]
+
     }
 }

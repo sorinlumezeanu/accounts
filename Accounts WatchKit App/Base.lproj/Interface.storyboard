@@ -9,10 +9,51 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Accounts Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Accounts_WatchKit_App" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="AccountsInterfaceController" customModule="Accounts_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="xN2-PI-JUo">
+                            <items>
+                                <tableRow identifier="AccountRow" id="tbY-Gb-Txb" customClass="AccountRowController" customModule="Accounts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="4Tf-W5-u3R">
+                                        <items>
+                                            <separator alignment="left" id="cos-29-8UE"/>
+                                            <group width="1" alignment="left" layout="vertical" spacing="0.0" id="7WK-Ca-IOf">
+                                                <items>
+                                                    <group width="1" alignment="left" id="EJd-uy-Cho">
+                                                        <items>
+                                                            <label alignment="left" text="Acc. No" id="ZTi-9T-2XX">
+                                                                <fontDescription key="font" type="italicSystem" pointSize="15"/>
+                                                            </label>
+                                                            <label alignment="right" text="Balance" textAlignment="left" id="flf-SR-CPN">
+                                                                <fontDescription key="font" type="italicSystem" pointSize="15"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                    <group width="1" alignment="left" id="QjC-LR-DXY">
+                                                        <items>
+                                                            <label alignment="left" text="1234" id="bFD-PY-PAs"/>
+                                                            <label alignment="right" text="EUR 12" id="2SK-3W-EOp"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="accountBalanceLabel" destination="2SK-3W-EOp" id="Slg-ys-r8s"/>
+                                        <outlet property="accountNumberLabel" destination="bFD-PY-PAs" id="i7t-h6-O6e"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="accountsTable" destination="xN2-PI-JUo" id="B9V-g8-aDi"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
