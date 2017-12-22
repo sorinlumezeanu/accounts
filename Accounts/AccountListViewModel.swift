@@ -10,10 +10,10 @@ import Foundation
 
 protocol AccountListViewModelDelegate: AnyObject {
     
-    func didReceiveAccountTypes()
+    func didReceiveAccountTypes(_ accountTypes: [AccountType])
     func fetchAccountTypesDidFinishWithError(_ error: Error?)
     
-    func didReceiveAccounts()
+    func didReceiveAccounts(_ accountsByType: [AccountType: AccountsResponse])
     func fetchAccountsDidFinishWithError(_ error: Error?)
 }
 
@@ -68,8 +68,8 @@ class AccountListViewModel {
             self?.isAccountTypesRequestComplete = true
             self?.accountTypes = accountTypes
             
-            if let _ = accountTypes {
-                self?.delegate?.didReceiveAccountTypes()
+            if let accountTypes = accountTypes {
+                self?.delegate?.didReceiveAccountTypes(accountTypes)
                 self?.fetchAccounts()                
             } else {
                 self?.delegate?.fetchAccountTypesDidFinishWithError(error)
@@ -87,8 +87,8 @@ class AccountListViewModel {
             self?.isAccountsRequestComplete = true
             self?.accountsByType = accountsByTypeResponse.accountsByType
             
-            if let _ = accountsByTypeResponse.accountsByType {
-                self?.delegate?.didReceiveAccounts()
+            if let accountsByType = accountsByTypeResponse.accountsByType {
+                self?.delegate?.didReceiveAccounts(accountsByType)
             } else {
                 self?.delegate?.fetchAccountsDidFinishWithError(accountsByTypeResponse.error)
             }

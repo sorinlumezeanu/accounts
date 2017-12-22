@@ -52,7 +52,7 @@ class AccountListViewController: UIViewController {
 
 extension AccountListViewController: AccountListViewModelDelegate {
     
-    func didReceiveAccountTypes() {
+    func didReceiveAccountTypes(_ accountTypes: [AccountType]) {
         self.accountsTableView.reloadData()
     }
     
@@ -60,7 +60,7 @@ extension AccountListViewController: AccountListViewModelDelegate {
         self.accountsTableView.reloadData()
     }
     
-    func didReceiveAccounts() {
+    func didReceiveAccounts(_ accountsByType: [AccountType: AccountsResponse]) {
         self.accountsTableView.reloadData()
     }
     

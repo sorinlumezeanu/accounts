@@ -13,7 +13,6 @@
 		FF57CD2F1FEB86DD008B5D04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD2D1FEB86DD008B5D04 /* Main.storyboard */; };
 		FF57CD311FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD301FEB86DD008B5D04 /* Assets.xcassets */; };
 		FF57CD341FEB86DD008B5D04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD321FEB86DD008B5D04 /* LaunchScreen.storyboard */; };
-		FF57CD3F1FEB86DD008B5D04 /* AccountsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD3E1FEB86DD008B5D04 /* AccountsTests.swift */; };
 		FF57CD441FEB86DD008B5D04 /* Accounts WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FF57CD431FEB86DD008B5D04 /* Accounts WatchKit App.app */; };
 		FF57CD4A1FEB86DD008B5D04 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD481FEB86DD008B5D04 /* Interface.storyboard */; };
 		FF57CD4C1FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD4B1FEB86DD008B5D04 /* Assets.xcassets */; };
@@ -33,7 +32,6 @@
 		FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
 		FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
 		FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */; };
-		FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */; };
 		FFCFE0E61FEBA58000022493 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */; };
 		FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */; };
 		FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */; };
@@ -60,6 +58,25 @@
 		FFDF1EAD1FED0A2C004861F1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EAC1FED0A2C004861F1 /* main.swift */; };
 		FFDF1EB01FED0A80004861F1 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */; };
 		FFDF1EB21FED0A99004861F1 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDF1EB11FED0A99004861F1 /* Testing.storyboard */; };
+		FFDF1EB51FED0B97004861F1 /* AccountListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EB41FED0B97004861F1 /* AccountListViewModelTests.swift */; };
+		FFDF1EB61FED0BF1004861F1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
+		FFDF1EB71FED0BF4004861F1 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */; };
+		FFDF1EB81FED0BF7004861F1 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687631FEC7E6500E0A464 /* DataServiceProtocol.swift */; };
+		FFDF1EB91FED0BFD004861F1 /* AccountFetchingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */; };
+		FFDF1EBA1FED0BFF004861F1 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
+		FFDF1EBB1FED0C02004861F1 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
+		FFDF1EBC1FED0C0C004861F1 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
+		FFDF1EBD1FED0C0F004861F1 /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874D1FEBDFAB00E0A464 /* ApplicationError.swift */; };
+		FFDF1EBE1FED0C11004861F1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B721FEB8EA800081E5B /* Currency.swift */; };
+		FFDF1EBF1FED0C14004861F1 /* FetchAccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */; };
+		FFDF1EC01FED0C18004861F1 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
+		FFDF1EC11FED0C1B004861F1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
+		FFDF1EC21FED0C1E004861F1 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
+		FFDF1EC31FED0C21004861F1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B741FEB8ECC00081E5B /* Account.swift */; };
+		FFDF1EC41FED0C2E004861F1 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */; };
+		FFDF1EC51FED0C4F004861F1 /* FileDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6875E1FEBF4FB00E0A464 /* FileDataService.swift */; };
+		FFDF1EC61FED0C5B004861F1 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687651FEC809700E0A464 /* JSONConverter.swift */; };
+		FFDF1EC91FED0D64004861F1 /* DelegateMockBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EC81FED0D64004861F1 /* DelegateMockBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +142,6 @@
 		FF57CD331FEB86DD008B5D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF57CD351FEB86DD008B5D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57CD3A1FEB86DD008B5D04 /* AccountsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF57CD3E1FEB86DD008B5D04 /* AccountsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTests.swift; sourceTree = "<group>"; };
 		FF57CD401FEB86DD008B5D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57CD431FEB86DD008B5D04 /* Accounts WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Accounts WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF57CD491FEB86DD008B5D04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -149,7 +165,6 @@
 		FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FFCFE0DE1FEB9BAF00022493 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
-		FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceMock.swift; sourceTree = "<group>"; };
 		FFCFE0E51FEBA58000022493 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		FFCFE0E71FEBA58B00022493 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
 		FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFetchingOptions.swift; sourceTree = "<group>"; };
@@ -176,6 +191,8 @@
 		FFDF1EAC1FED0A2C004861F1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		FFDF1EB11FED0A99004861F1 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
+		FFDF1EB41FED0B97004861F1 /* AccountListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModelTests.swift; sourceTree = "<group>"; };
+		FFDF1EC81FED0D64004861F1 /* DelegateMockBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateMockBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,9 +286,9 @@
 		FF57CD3D1FEB86DD008B5D04 /* AccountsTests */ = {
 			isa = PBXGroup;
 			children = (
+				FFDF1EC71FED0D4C004861F1 /* Common */,
 				FFDF1EAE1FED0A70004861F1 /* Auxiliary */,
-				FF57CD3E1FEB86DD008B5D04 /* AccountsTests.swift */,
-				FF57CD401FEB86DD008B5D04 /* Info.plist */,
+				FFDF1EB31FED0B74004861F1 /* AccountListViewModel Tests */,
 			);
 			path = AccountsTests;
 			sourceTree = "<group>";
@@ -403,7 +420,6 @@
 				FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */,
 				FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */,
 				FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */,
-				FFCFE0E21FEB9C4B00022493 /* AccountServiceMock.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -484,10 +500,27 @@
 		FFDF1EAE1FED0A70004861F1 /* Auxiliary */ = {
 			isa = PBXGroup;
 			children = (
+				FF57CD401FEB86DD008B5D04 /* Info.plist */,
 				FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */,
 				FFDF1EB11FED0A99004861F1 /* Testing.storyboard */,
 			);
 			name = Auxiliary;
+			sourceTree = "<group>";
+		};
+		FFDF1EB31FED0B74004861F1 /* AccountListViewModel Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF1EB41FED0B97004861F1 /* AccountListViewModelTests.swift */,
+			);
+			name = "AccountListViewModel Tests";
+			sourceTree = "<group>";
+		};
+		FFDF1EC71FED0D4C004861F1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF1EC81FED0D64004861F1 /* DelegateMockBase.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -783,7 +816,6 @@
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
 				FFD687591FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift in Sources */,
 				FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */,
-				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FFD6874E1FEBDFAB00E0A464 /* ApplicationError.swift in Sources */,
 				FFD687641FEC7E6500E0A464 /* DataServiceProtocol.swift in Sources */,
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
@@ -801,8 +833,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF57CD3F1FEB86DD008B5D04 /* AccountsTests.swift in Sources */,
+				FFDF1EBE1FED0C11004861F1 /* Currency.swift in Sources */,
+				FFDF1EC91FED0D64004861F1 /* DelegateMockBase.swift in Sources */,
+				FFDF1EC01FED0C18004861F1 /* ProductType.swift in Sources */,
+				FFDF1EC11FED0C1B004861F1 /* Product.swift in Sources */,
+				FFDF1EBD1FED0C0F004861F1 /* ApplicationError.swift in Sources */,
+				FFDF1EC61FED0C5B004861F1 /* JSONConverter.swift in Sources */,
+				FFDF1EBF1FED0C14004861F1 /* FetchAccountsResponse.swift in Sources */,
+				FFDF1EBC1FED0C0C004861F1 /* HTTPStatusCode.swift in Sources */,
+				FFDF1EBB1FED0C02004861F1 /* AccountService.swift in Sources */,
+				FFDF1EB71FED0BF4004861F1 /* ServiceProvider.swift in Sources */,
+				FFDF1EB61FED0BF1004861F1 /* Service.swift in Sources */,
+				FFDF1EB81FED0BF7004861F1 /* DataServiceProtocol.swift in Sources */,
+				FFDF1EC51FED0C4F004861F1 /* FileDataService.swift in Sources */,
+				FFDF1EC31FED0C21004861F1 /* Account.swift in Sources */,
+				FFDF1EC21FED0C1E004861F1 /* AccountType.swift in Sources */,
+				FFDF1EB51FED0B97004861F1 /* AccountListViewModelTests.swift in Sources */,
 				FFDF1EB01FED0A80004861F1 /* TestingAppDelegate.swift in Sources */,
+				FFDF1EB91FED0BFD004861F1 /* AccountFetchingOptions.swift in Sources */,
+				FFDF1EC41FED0C2E004861F1 /* AccountListViewModel.swift in Sources */,
+				FFDF1EBA1FED0BFF004861F1 /* AccountServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
