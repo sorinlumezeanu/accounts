@@ -18,8 +18,15 @@ class AccountRowController: NSObject {
         didSet {
             guard let account = account else { return }
             
-            self.accountNumberLabel.setText(account.number)
-            self.accountBalanceLabel.setText(String(describing: account.balanceInCents))            
+            // account number
+            self.accountNumberLabel.setText(account.number ?? "")
+            
+            // balance
+            guard let currency = account.currency else { return }
+            guard let balanceInCents = account.balanceInCents else { return }
+            let currencyFormatter = currency.formatter(withMaxFractionDigits: 2)
+            let balanceText = currencyFormatter.string(from: NSNumber(value: Double(balanceInCents) / 100.0))            
+            self.accountBalanceLabel.setText(balanceText)
         }
     }
 }
