@@ -8,15 +8,15 @@
 
 import Foundation
 
-class AccountDTOResponse: NSCoding {
+class AccountDTOResponse: NSObject, NSCoding {
     
-    var accounts: [AccountDTOProtocol]?
+    var accounts: [AccountDTO]?
     
-    init() {
+    override init() {
     }
     
     public required init(coder aDecoder: NSCoder) {
-        self.accounts = aDecoder.decodeObject(forKey: "accounts") as? [AccountDTOProtocol]
+        self.accounts = aDecoder.decodeObject(forKey: "accounts") as? [AccountDTO]
     }
     
     public func encode(with aCoder: NSCoder) {

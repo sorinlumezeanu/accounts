@@ -56,6 +56,7 @@ class AccountsInterfaceController: WKInterfaceController {
         
         wcSession.sendMessage([:], replyHandler: { [weak self] (response) in
             if let strongSelf = self {
+                
                 let response = NSKeyedUnarchiver.unarchiveObject(with: response["response"] as! Data) as? AccountDTOResponse
                 if let receivedAccounts = response?.accounts {
                     strongSelf.accounts = receivedAccounts

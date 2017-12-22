@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        NSKeyedArchiver.setClassName("AccountDTOResponse", for: AccountDTOResponse.self)
+        NSKeyedArchiver.setClassName("AccountDTO", for: AccountDTO.self)
+        NSKeyedUnarchiver.setClass(AccountDTOResponse.self, forClassName: "AccountDTOResponse")
+        NSKeyedUnarchiver.setClass(AccountDTO.self, forClassName: "AccountDTO")
+        
         ServiceProvider.addDefaultResolvers()
         
         if WCSession.isSupported() {
@@ -58,7 +63,7 @@ extension AppDelegate: WCSessionDelegate {
         accountService.fetchAccountDTOs(withOptions: .all) { (accountDTOs, error) in
             if let accountDTOs = accountDTOs {
                 let response = AccountDTOResponse()
-                response.accounts = accountDTOs
+                response.accounts = accountDTOs as? [AccountDTO]
                 let responseData = NSKeyedArchiver.archivedData(withRootObject: response)
                 replyHandler(["response": responseData])
             }
