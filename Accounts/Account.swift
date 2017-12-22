@@ -10,7 +10,9 @@ import Foundation
 
 import ObjectMapper
 
-class Account: Mappable {
+
+class Account: AccountDTOProtocol, Mappable {
+    
     var type: AccountType?
     
     var id: Int?
@@ -37,6 +39,7 @@ class Account: Mappable {
     }
     
     init() {
+        // required for mocking Account objects (Tests target)
     }
     
     func mapping(map: Map) {

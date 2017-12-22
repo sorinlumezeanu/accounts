@@ -28,6 +28,17 @@
 		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
 		FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */; };
 		FFC0167B1FED2CB500100FAA /* AccountDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */; };
+		FFC0167E1FED43A300100FAA /* AccountsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0167D1FED43A300100FAA /* AccountsInterfaceController.swift */; };
+		FFC0167F1FED43E900100FAA /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
+		FFC016801FED43ED00100FAA /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874D1FEBDFAB00E0A464 /* ApplicationError.swift */; };
+		FFC016811FED43F100100FAA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B721FEB8EA800081E5B /* Currency.swift */; };
+		FFC016831FED43FD00100FAA /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
+		FFC016841FED440000100FAA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
+		FFC016851FED440200100FAA /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
+		FFC016881FED44C000100FAA /* AccountRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016871FED44C000100FAA /* AccountRowController.swift */; };
+		FFC0168E1FED46E900100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
+		FFC0168F1FED470000100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
+		FFC016901FED470100100FAA /* AccountDTOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */; };
 		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
 		FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
@@ -163,6 +174,11 @@
 		FF7E3B7A1FEB90FD00081E5B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewModel.swift; sourceTree = "<group>"; };
+		FFC0167D1FED43A300100FAA /* AccountsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInterfaceController.swift; sourceTree = "<group>"; };
+		FFC016871FED44C000100FAA /* AccountRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRowController.swift; sourceTree = "<group>"; };
+		FFC0168A1FED461600100FAA /* Pods_Accounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Accounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC0168C1FED462100100FAA /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTOProtocol.swift; sourceTree = "<group>"; };
 		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsResponse.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
@@ -236,6 +252,8 @@
 		355784208CDAA9F0D9395C81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFC0168C1FED462100100FAA /* ObjectMapper.framework */,
+				FFC0168A1FED461600100FAA /* Pods_Accounts.framework */,
 				5F3540CAFD09C28BEEFF4771 /* Pods_Accounts.framework */,
 				7EAAF9E673B7786CEF3A2C53 /* Pods_AccountsTests.framework */,
 			);
@@ -310,12 +328,12 @@
 		FF57CD561FEB86DD008B5D04 /* Accounts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FFC0167C1FED436F00100FAA /* Auxiliary */,
 				FF57CD571FEB86DD008B5D04 /* InterfaceController.swift */,
-				FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */,
 				FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */,
-				FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */,
-				FF57CD5F1FEB86DD008B5D04 /* Info.plist */,
 				FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */,
+				FFC0167D1FED43A300100FAA /* AccountsInterfaceController.swift */,
+				FFC016871FED44C000100FAA /* AccountRowController.swift */,
 			);
 			path = "Accounts WatchKit Extension";
 			sourceTree = "<group>";
@@ -398,6 +416,7 @@
 			children = (
 				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
 				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
+				FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -418,6 +437,16 @@
 				FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */,
 			);
 			name = "Account Details";
+			sourceTree = "<group>";
+		};
+		FFC0167C1FED436F00100FAA /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */,
+				FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */,
+				FF57CD5F1FEB86DD008B5D04 /* Info.plist */,
+			);
+			name = Auxiliary;
 			sourceTree = "<group>";
 		};
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
@@ -830,6 +859,7 @@
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
 				FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */,
+				FFC0168E1FED46E900100FAA /* AccountDTOProtocol.swift in Sources */,
 				FFD6875F1FEBF4FB00E0A464 /* FileDataService.swift in Sources */,
 				FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */,
 				FFD687441FEBD40A00E0A464 /* DataLoadingCell.swift in Sources */,
@@ -854,6 +884,7 @@
 				FFDF1EB61FED0BF1004861F1 /* Service.swift in Sources */,
 				FFDF1EB81FED0BF7004861F1 /* DataServiceProtocol.swift in Sources */,
 				FFDF1EC51FED0C4F004861F1 /* FileDataService.swift in Sources */,
+				FFC016901FED470100100FAA /* AccountDTOProtocol.swift in Sources */,
 				FFDF1EC31FED0C21004861F1 /* Account.swift in Sources */,
 				FFDF1EC21FED0C1E004861F1 /* AccountType.swift in Sources */,
 				FFDF1EB51FED0B97004861F1 /* AccountListViewModelTests.swift in Sources */,
@@ -868,9 +899,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC0167F1FED43E900100FAA /* HTTPStatusCode.swift in Sources */,
 				FF57CD5C1FEB86DD008B5D04 /* NotificationController.swift in Sources */,
+				FFC016881FED44C000100FAA /* AccountRowController.swift in Sources */,
+				FFC016831FED43FD00100FAA /* ProductType.swift in Sources */,
 				FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */,
 				FF57CD581FEB86DD008B5D04 /* InterfaceController.swift in Sources */,
+				FFC0167E1FED43A300100FAA /* AccountsInterfaceController.swift in Sources */,
+				FFC0168F1FED470000100FAA /* AccountDTOProtocol.swift in Sources */,
+				FFC016811FED43F100100FAA /* Currency.swift in Sources */,
+				FFC016841FED440000100FAA /* Product.swift in Sources */,
+				FFC016801FED43ED00100FAA /* ApplicationError.swift in Sources */,
+				FFC016851FED440200100FAA /* AccountType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
