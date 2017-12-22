@@ -15,10 +15,10 @@ class AccountService: AccountServiceProtocol {
     }
     
     func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
-        let parser = Parser(withBundledFileName: "Datasource")
-        parser.parse()
-        
-        let response: AccountsByTypeResponse = (accountsByType: nil, error: nil)
-        completion(response)
+        let dataService: DataServiceProtocol = ServiceProvider.resolve()
+        dataService.fetchAccounts { (accounts, error) in
+            let response: AccountsByTypeResponse = (accountsByType: nil, error: nil)
+            completion(response)
+        }        
     }
 }
