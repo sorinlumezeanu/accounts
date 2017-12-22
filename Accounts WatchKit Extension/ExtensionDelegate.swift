@@ -11,7 +11,10 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        NSKeyedArchiver.setClassName("AccountDTOResponse", for: AccountDTOResponse.self)
+        NSKeyedArchiver.setClassName("AccountDTO", for: AccountDTO.self)
+        NSKeyedUnarchiver.setClass(AccountDTOResponse.self, forClassName: "AccountDTOResponse")
+        NSKeyedUnarchiver.setClass(AccountDTO.self, forClassName: "AccountDTO")
     }
 
     func applicationDidBecomeActive() {

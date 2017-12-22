@@ -20,6 +20,8 @@
 		FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD591FEB86DD008B5D04 /* ExtensionDelegate.swift */; };
 		FF57CD5C1FEB86DD008B5D04 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF57CD5B1FEB86DD008B5D04 /* NotificationController.swift */; };
 		FF57CD5E1FEB86DD008B5D04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */; };
+		FF5B1EE31FED71BE00C4DB06 /* AccountsDTOResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5B1EE21FED71BE00C4DB06 /* AccountsDTOResponse.swift */; };
+		FF5B1EE41FED724C00C4DB06 /* AccountsDTOResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5B1EE21FED71BE00C4DB06 /* AccountsDTOResponse.swift */; };
 		FF7E3B731FEB8EA800081E5B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B721FEB8EA800081E5B /* Currency.swift */; };
 		FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B741FEB8ECC00081E5B /* Account.swift */; };
 		FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
@@ -168,6 +170,7 @@
 		FF57CD5D1FEB86DD008B5D04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57CD5F1FEB86DD008B5D04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF57CD601FEB86DD008B5D04 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FF5B1EE21FED71BE00C4DB06 /* AccountsDTOResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsDTOResponse.swift; sourceTree = "<group>"; };
 		FF7E3B721FEB8EA800081E5B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		FF7E3B741FEB8ECC00081E5B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		FF7E3B761FEB8F3300081E5B /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -455,6 +458,7 @@
 			children = (
 				FFC0168D1FED46E900100FAA /* AccountDTOProtocol.swift */,
 				FFC016911FED4D1500100FAA /* AccountDTO.swift */,
+				FF5B1EE21FED71BE00C4DB06 /* AccountsDTOResponse.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -849,6 +853,7 @@
 				FF7E3B751FEB8ECC00081E5B /* Account.swift in Sources */,
 				FFD687571FEBE34F00E0A464 /* AccountTypeHeaderView.swift in Sources */,
 				FFD687511FEBE1AB00E0A464 /* NoResultsCell.swift in Sources */,
+				FF5B1EE31FED71BE00C4DB06 /* AccountsDTOResponse.swift in Sources */,
 				FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */,
 				FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */,
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
@@ -917,6 +922,7 @@
 				FFC016831FED43FD00100FAA /* ProductType.swift in Sources */,
 				FF57CD5A1FEB86DD008B5D04 /* ExtensionDelegate.swift in Sources */,
 				FFC0167E1FED43A300100FAA /* AccountsInterfaceController.swift in Sources */,
+				FF5B1EE41FED724C00C4DB06 /* AccountsDTOResponse.swift in Sources */,
 				FFC0168F1FED470000100FAA /* AccountDTOProtocol.swift in Sources */,
 				FFC016941FED4D5D00100FAA /* AccountDTO.swift in Sources */,
 				FFC016811FED43F100100FAA /* Currency.swift in Sources */,

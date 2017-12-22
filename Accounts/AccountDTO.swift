@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AccountDTO: AccountDTOProtocol, NSCoding {
+class AccountDTO: NSObject, AccountDTOProtocol, NSCoding {
     
     var id: Int?
     var name: String?
@@ -16,7 +16,7 @@ class AccountDTO: AccountDTOProtocol, NSCoding {
     var balanceInCents: Int?
     var currency: Currency?
     
-    init() {        
+    override init() {        
     }
     
     public required init(coder aDecoder: NSCoder) {
@@ -39,3 +39,5 @@ class AccountDTO: AccountDTOProtocol, NSCoding {
         aCoder.encode(self.currency?.rawValue, forKey: "currencyRawValue")
     }
 }
+
+
