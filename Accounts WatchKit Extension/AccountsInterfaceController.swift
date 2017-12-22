@@ -13,7 +13,8 @@ import WatchConnectivity
 class AccountsInterfaceController: WKInterfaceController {
     
     var wcSession: WCSession!
-    
+    private var isWCSessionActivated = false
+
     @IBOutlet var accountsTable: WKInterfaceTable!
 
     var accounts: [AccountDTOProtocol] = []
@@ -21,21 +22,14 @@ class AccountsInterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-        if WCSession.isSupported() {
-            self.wcSession = WCSession.default()
-            self.wcSession.delegate = self
-            self.wcSession.activate()
-            
-            self.fetchAccounts()
-        }
+        self.activateWCSession()
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        if WCSession.isSupported() {
-            self.fetchAccounts()
-        }
+
+        self.activateWCSession()
+        self.fetchAccounts()
     }
     
     func updateUI() {
@@ -55,8 +49,7 @@ class AccountsInterfaceController: WKInterfaceController {
     func fetchAccounts() {
         guard let wcSession = self.wcSession else { return }
         
-        let message: [String: Any] = ["message": "fetchAccounts"]
-        wcSession.sendMessage(message, replyHandler: { [weak self] (response) in
+        wcSession.sendMessage([:], replyHandler: { [weak self] (response) in
             if let strongSelf = self {
                 if let receivedAccounts = response["accounts"] as? [AccountDTOProtocol] {
                     strongSelf.accounts = receivedAccounts
@@ -71,6 +64,18 @@ class AccountsInterfaceController: WKInterfaceController {
         }
     }
     
+    
+    private func activateWCSession() {
+        guard self.isWCSessionActivated == false else { return }
+        
+        if WCSession.isSupported() {
+            self.wcSession = WCSession.default()
+            self.wcSession.delegate = self
+            self.wcSession.activate()
+            
+            self.isWCSessionActivated = true
+        }
+    }
 }
 
 extension AccountsInterfaceController: WCSessionDelegate {
