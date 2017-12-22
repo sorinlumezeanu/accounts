@@ -18,17 +18,24 @@ class AccountsInterfaceController: WKInterfaceController {
 
     var accounts: [AccountDTOProtocol] = []
     
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
+    override func willActivate() {
+        super.willActivate()
         
         if WCSession.isSupported() {
             self.wcSession = WCSession.default()
             self.wcSession.delegate = self
             self.wcSession.activate()
+            
+            self.fetchAccounts()
         }
+    }
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
-        self.fetchAccounts()
+        if WCSession.isSupported() {
+            self.fetchAccounts()
+        }
     }
     
     func updateUI() {
