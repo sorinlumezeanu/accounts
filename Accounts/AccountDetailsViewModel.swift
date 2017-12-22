@@ -22,9 +22,91 @@ class AccountDetailsViewModel {
         self.delegate = delegate
     }
     
-    var screenTitle: String {
+    var screenTitle: String? {
         get {
-            return "title here"
+            return self.accountNumberText
+        }
+    }
+    
+    var accountTypeText: String? {
+        get {
+            return self.account.type?.description
+        }
+    }
+    
+    var accountIdentifierText: String? {
+        get {
+            guard let accountId = self.account.id else { return nil }
+            return "\(accountId)"
+        }
+    }
+    
+    var accountNumberText: String? {
+        get {
+            return self.account.number
+        }
+    }
+    
+    var accountNameText: String? {
+        get {
+            return self.account.name?.trimmingCharacters(in: .punctuationCharacters)
+        }
+    }
+    
+    var accountAliasText: String? {
+        get {
+            return self.account.alias
+        }
+    }
+    
+    var accountBalanceText: String? {
+        get {
+            guard let currency = self.account.currency else { return nil }
+            guard let balanceInCents = self.account.balanceInCents else { return nil }
+            
+            let currencyFormatter = currency.formatter(withMaxFractionDigits: 2)
+            return currencyFormatter.string(from: NSNumber(value: Double(balanceInCents) / 100.0))
+        }
+    }
+    
+    var ibanText: String? {
+        get {
+            return self.account.iban
+        }
+    }
+    
+    var productText: String? {
+        get {            
+            return self.account.product?.description
+        }
+    }
+    
+    var targetAmountText: String? {
+        get {
+            guard let currency = self.account.currency else { return nil }
+            guard let targetAmountInCents = self.account.targetAmountInCents else { return nil }
+            
+            let currencyFormatter = currency.formatter(withMaxFractionDigits: 2)
+            return currencyFormatter.string(from: NSNumber(value: Double(targetAmountInCents) / 100.0))
+        }
+    }
+    
+    var isSavingsTargetReachedText: String? {
+        get {
+            return self.account.isSavingsTargetReached == true ? "Yes" : "No"
+        }
+    }
+    
+    var linkedAccountText: String? {
+        get {
+            guard let linkedAccountId = self.account.linkedAccountId else { return nil }
+            return "\(linkedAccountId)"
+        }
+    }
+    
+    var shouldDisplayAccountSavingsDetails: Bool {
+        get {
+            return self.account.type == AccountType.savings
         }
     }
 }

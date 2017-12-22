@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Product {
+class Product: CustomStringConvertible {
     var type: ProductType?
     var name: String?
+    
+    var description: String {
+        get {
+            return (self.name ?? "") + " / " + (self.type?.description ?? "")
+        }
+    }
 }

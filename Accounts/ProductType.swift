@@ -8,8 +8,14 @@
 
 import Foundation
 
-enum ProductType: Int {
+enum ProductType: Int, CustomStringConvertible {
     case standardSavings = 1000
     
     // add future product types here
+    
+    var description: String {
+        get {
+            return "\(self.rawValue)"
+        }
+    }
 }
