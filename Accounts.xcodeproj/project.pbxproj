@@ -26,6 +26,8 @@
 		FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
 		FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
 		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
+		FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */; };
+		FFC0167B1FED2CB500100FAA /* AccountDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */; };
 		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
 		FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
@@ -159,6 +161,8 @@
 		FF7E3B761FEB8F3300081E5B /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		FF7E3B781FEB906700081E5B /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		FF7E3B7A1FEB90FD00081E5B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewModel.swift; sourceTree = "<group>"; };
 		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsResponse.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
@@ -371,6 +375,7 @@
 			children = (
 				FFCFE0EB1FEBCB9300022493 /* Common */,
 				FFCFE0E41FEBA56600022493 /* Account List */,
+				FFC016771FED2C8400100FAA /* Account Details */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -404,6 +409,15 @@
 				FF7E3B7A1FEB90FD00081E5B /* Product.swift */,
 			);
 			name = Product;
+			sourceTree = "<group>";
+		};
+		FFC016771FED2C8400100FAA /* Account Details */ = {
+			isa = PBXGroup;
+			children = (
+				FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */,
+				FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */,
+			);
+			name = "Account Details";
 			sourceTree = "<group>";
 		};
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
@@ -811,9 +825,11 @@
 				FFD6874E1FEBDFAB00E0A464 /* ApplicationError.swift in Sources */,
 				FFD687641FEC7E6500E0A464 /* DataServiceProtocol.swift in Sources */,
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
+				FFC0167B1FED2CB500100FAA /* AccountDetailsViewModel.swift in Sources */,
 				FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */,
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
+				FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */,
 				FFD6875F1FEBF4FB00E0A464 /* FileDataService.swift in Sources */,
 				FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */,
 				FFD687441FEBD40A00E0A464 /* DataLoadingCell.swift in Sources */,

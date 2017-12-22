@@ -13,6 +13,8 @@ class AccountListViewController: UIViewController {
     fileprivate struct Constants {
         static let defaultRowHeight: CGFloat = 44
         static let mediumRowHeight: CGFloat = 60
+        
+        static let showAccountDetailsSegueIdentifier = "ShowAccountDetailsSegueIdentifier"
     }
     
     @IBOutlet weak var accountsTableView: UITableView!
@@ -41,7 +43,6 @@ class AccountListViewController: UIViewController {
         self.viewModel.startFetchingData()
     }
     
-    
     @IBAction func filterValueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -54,6 +55,14 @@ class AccountListViewController: UIViewController {
             self.viewModel.startFetchingData()
         default:
             break
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.showAccountDetailsSegueIdentifier {
+            if let destination = segue.destination as? AccountDetailsViewController, let account = sender as? Account {
+                destination.viewModel = AccountDetailsViewModel(withAccount: account, delegate: destination)
+            }
         }
     }
 }
@@ -151,5 +160,16 @@ extension AccountListViewController: UITableViewDataSource {
 }
 
 extension AccountListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let rowType = self.viewModel.rowType(forIndexPath: indexPath) else { return }
+        
+        switch rowType {
+        case .account(let account):
+            self.performSegue(withIdentifier: Constants.showAccountDetailsSegueIdentifier, sender: account)
+        default:
+            break
+        }
+    }
     
 }

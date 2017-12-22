@@ -22,6 +22,8 @@ class AccountCell: UITableViewCell {
         self.viewModel = viewModel
         
         self.selectionStyle = .none
+        self.accessoryType = .disclosureIndicator
+        
         self.accountNumberLabel.text = self.viewModel.accountNumberDisplayText
         self.accountBalanceLabel.text = self.viewModel.accountBalanceDisplayText
     }
