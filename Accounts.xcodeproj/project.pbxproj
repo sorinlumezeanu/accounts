@@ -27,10 +27,6 @@
 		FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
 		FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
 		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
-		FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7E1FEB990900081E5B /* AccountBase.swift */; };
-		FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B801FEB992000081E5B /* PaymentAccount.swift */; };
-		FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */; };
-		FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */; };
 		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
 		FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
@@ -143,10 +139,6 @@
 		FF7E3B761FEB8F3300081E5B /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		FF7E3B781FEB906700081E5B /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		FF7E3B7A1FEB90FD00081E5B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		FF7E3B7E1FEB990900081E5B /* AccountBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBase.swift; sourceTree = "<group>"; };
-		FF7E3B801FEB992000081E5B /* PaymentAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccount.swift; sourceTree = "<group>"; };
-		FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsAccount.swift; sourceTree = "<group>"; };
-		FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
 		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
 		FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -379,10 +371,6 @@
 				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
 				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
-				FF7E3B7E1FEB990900081E5B /* AccountBase.swift */,
-				FF7E3B801FEB992000081E5B /* PaymentAccount.swift */,
-				FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */,
-				FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -767,7 +755,6 @@
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
 				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
-				FF7E3B7F1FEB990900081E5B /* AccountBase.swift in Sources */,
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
 				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
@@ -776,10 +763,7 @@
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
 				FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */,
 				FFD687641FEC7E6500E0A464 /* DataServiceProtocol.swift in Sources */,
-				FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */,
-				FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */,
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
-				FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */,
 				FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */,
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
