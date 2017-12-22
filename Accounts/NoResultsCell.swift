@@ -20,6 +20,7 @@ class NoResultsCell: UITableViewCell {
     func configure(with viewModel: NoResultsCellViewModel) {
         self.viewModel = viewModel
         
+        self.selectionStyle = .none
         self.messageLabel.text = self.viewModel.message
     }
     

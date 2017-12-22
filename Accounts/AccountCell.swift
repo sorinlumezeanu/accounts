@@ -13,19 +13,23 @@ class AccountCell: UITableViewCell {
     static let reuseIdentifier = "AccountCellReuseIdentifier"
     static let nib = UINib(nibName: "AccountCell", bundle: nil)
     
-    @IBOutlet weak var accountIdentifierLabel: UILabel!
+    @IBOutlet weak var accountNumberLabel: UILabel!
+    @IBOutlet weak var accountBalanceLabel: UILabel!
     
     private var viewModel: AccountCellViewModel!
     
     func configure(with viewModel: AccountCellViewModel) {
         self.viewModel = viewModel
         
-        self.accountIdentifierLabel.text = self.viewModel.identifierDisplayText()
+        self.selectionStyle = .none
+        self.accountNumberLabel.text = self.viewModel.accountNumberDisplayText
+        self.accountBalanceLabel.text = self.viewModel.accountBalanceDisplayText
     }
     
     override func prepareForReuse() {
         self.viewModel = nil
         
-        self.accountIdentifierLabel.text = nil
+        self.accountNumberLabel.text = nil
+        self.accountBalanceLabel.text = nil
     }
 }

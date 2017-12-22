@@ -351,7 +351,6 @@
 		FF57CD741FEB884B008B5D04 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FF57CD761FEB8863008B5D04 /* Theme */,
 				FF57CD751FEB8851008B5D04 /* Storyboards */,
 				FF57CD771FEB8877008B5D04 /* Scenes */,
 			);
@@ -365,13 +364,6 @@
 				FF57CD321FEB86DD008B5D04 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		FF57CD761FEB8863008B5D04 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Theme;
 			sourceTree = "<group>";
 		};
 		FF57CD771FEB8877008B5D04 /* Scenes */ = {

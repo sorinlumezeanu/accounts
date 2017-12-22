@@ -10,6 +10,11 @@ import UIKit
 
 class AccountListViewController: UIViewController {
  
+    fileprivate struct Constants {
+        static let defaultRowHeight: CGFloat = 44
+        static let mediumRowHeight: CGFloat = 60
+    }
+    
     @IBOutlet weak var accountsTableView: UITableView!
     
     fileprivate var viewModel: AccountListViewModel!
@@ -91,6 +96,17 @@ extension AccountListViewController: UITableViewDataSource {
         return self.viewModel.numberOfRows(forSection: section)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let rowType = self.viewModel.rowType(forIndexPath: indexPath) else { return 0 }
+        
+        switch rowType {
+        case .account(_):
+            return Constants.mediumRowHeight
+        default:
+            return Constants.defaultRowHeight
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let rowType = self.viewModel.rowType(forIndexPath: indexPath) else { return UITableViewCell() }
         
@@ -120,7 +136,7 @@ extension AccountListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard let _ = self.viewModel.accountType(forSection: section) else { return 0 }
         
-        return 44
+        return Constants.defaultRowHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -130,6 +146,8 @@ extension AccountListViewController: UITableViewDataSource {
         headerView.configure(with: AccountTypeHeaderViewModel(withAccountType: accountType))
         return headerView
     }
+    
+
 }
 
 extension AccountListViewController: UITableViewDelegate {

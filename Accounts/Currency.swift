@@ -11,4 +11,18 @@ import Foundation
 enum Currency: String {
     case EUR = "EUR"
     case USD = "USD"
+    
+    func formatter(withMaxFractionDigits maxFractionDigits: Int) -> NumberFormatter {
+        let numberFormatter = NumberFormatter()
+        
+        numberFormatter.locale = Locale(identifier: "en_GB")
+        numberFormatter.numberStyle = NumberFormatter.Style.currency
+        numberFormatter.currencyCode = self.rawValue
+        numberFormatter.maximumFractionDigits = maxFractionDigits
+        
+        let locale = NSLocale(localeIdentifier: self.rawValue)
+        numberFormatter.currencySymbol = locale.displayName(forKey: NSLocale.Key.currencySymbol, value: self.rawValue)
+        
+        return numberFormatter
+    }
 }

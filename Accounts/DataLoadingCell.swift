@@ -21,6 +21,8 @@ class DataLoadingCell: UITableViewCell {
     func configure(with viewModel: DataLoadingCellViewModel) {
         self.viewModel = viewModel
         
+        self.selectionStyle = .none
+        
         self.loadingMessageLabel.text = self.viewModel.loadingMessage
         self.activityIndicator.startAnimating()
     }

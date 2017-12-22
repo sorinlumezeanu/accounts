@@ -20,6 +20,7 @@ class StandardErrorCell: UITableViewCell {
     func configure(with viewModel: StandardErrorCellViewModel) {
         self.viewModel = viewModel
         
+        self.selectionStyle = .none
         self.errorLabel.text = viewModel.errorMessage
     }
     
