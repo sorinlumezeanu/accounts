@@ -39,3 +39,5 @@ class AccountDTO: AccountDTOProtocol, NSCoding {
         aCoder.encode(self.currency?.rawValue, forKey: "currencyRawValue")
     }
 }
+
+

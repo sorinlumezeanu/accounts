@@ -56,8 +56,8 @@ class AccountsInterfaceController: WKInterfaceController {
         
         wcSession.sendMessage([:], replyHandler: { [weak self] (response) in
             if let strongSelf = self {
-                let receivedAccounts = NSKeyedUnarchiver.unarchiveObject(with: response["accounts"] as! Data)
-                if let receivedAccounts = receivedAccounts as? [AccountDTOProtocol] {
+                let response = NSKeyedUnarchiver.unarchiveObject(with: response["response"] as! Data) as? AccountDTOResponse
+                if let receivedAccounts = response?.accounts {
                     strongSelf.accounts = receivedAccounts
                     
                     DispatchQueue.main.async {
