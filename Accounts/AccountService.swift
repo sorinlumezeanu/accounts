@@ -63,12 +63,11 @@ class AccountService: AccountServiceProtocol {
                     if let accounts = filteredResponse.accounts {
                         let accountDTOs: [AccountDTOProtocol] = accounts.map {
                             let accountDTO = AccountDTO()
-                            accountDTO.type = $0.type
                             accountDTO.id = $0.id
+                            accountDTO.name = $0.name
                             accountDTO.number = $0.number
                             accountDTO.balanceInCents = $0.balanceInCents
                             accountDTO.currency = $0.currency
-                            accountDTO.type = $0.type
                             return accountDTO
                         }
                         completion(accountDTOs, nil)

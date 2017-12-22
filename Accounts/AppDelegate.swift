@@ -57,7 +57,8 @@ extension AppDelegate: WCSessionDelegate {
         let accountService: AccountServiceProtocol = ServiceProvider.resolve()
         accountService.fetchAccountDTOs(withOptions: .all) { (accountDTOs, error) in
             if let accountDTOs = accountDTOs {
-                replyHandler(["accounts": accountDTOs])
+                let responseData = NSKeyedArchiver.archivedData(withRootObject: accountDTOs)
+                replyHandler(["accounts": responseData])
             }
         }
     }

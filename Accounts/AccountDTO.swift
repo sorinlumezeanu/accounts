@@ -8,26 +8,34 @@
 
 import Foundation
 
-class AccountDTO: AccountDTOProtocol {
-    
-    var type: AccountType?
+class AccountDTO: AccountDTOProtocol, NSCoding {
     
     var id: Int?
     var name: String?
-    var alias: String?
     var number: String?
-    
     var balanceInCents: Int?
     var currency: Currency?
     
-    var iban: String?
+    init() {        
+    }
     
-    var isVisible: Bool?
+    public required init(coder aDecoder: NSCoder) {
+        self.id = aDecoder.decodeObject(forKey: "identifier") as? Int
+        self.name = aDecoder.decodeObject(forKey: "name") as? String
+        self.number = aDecoder.decodeObject(forKey: "number") as? String
+        self.balanceInCents = aDecoder.decodeObject(forKey: "balanceInCents") as? Int
+        
+        let currencyRawValue = aDecoder.decodeObject(forKey: "currencyRawValue") as? String
+        if let currencyRawValue = currencyRawValue {
+            self.currency = Currency(rawValue: currencyRawValue)
+        }
+    }
     
-    var product: Product?
-    
-    var linkedAccountId: Int?
-    
-    var targetAmountInCents: Int?
-    var isSavingsTargetReached: Bool?
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.id, forKey: "identifier")
+        aCoder.encode(self.name, forKey: "name")
+        aCoder.encode(self.number, forKey: "number")
+        aCoder.encode(self.balanceInCents, forKey: "balanceInCents")
+        aCoder.encode(self.currency?.rawValue, forKey: "currencyRawValue")
+    }
 }

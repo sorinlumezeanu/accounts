@@ -13,7 +13,9 @@ import WatchConnectivity
 class AccountsInterfaceController: WKInterfaceController {
     
     var wcSession: WCSession!
-    private var isWCSessionActivated = false
+    
+    fileprivate var isWCSessionActivated = false
+    fileprivate var shouldFetchAccounts = false
 
     @IBOutlet var accountsTable: WKInterfaceTable!
 
@@ -28,8 +30,11 @@ class AccountsInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        self.activateWCSession()
-        self.fetchAccounts()
+        if self.isWCSessionActivated {
+            self.fetchAccounts()
+        } else {
+            self.shouldFetchAccounts = true
+        }
     }
     
     func updateUI() {
@@ -51,7 +56,8 @@ class AccountsInterfaceController: WKInterfaceController {
         
         wcSession.sendMessage([:], replyHandler: { [weak self] (response) in
             if let strongSelf = self {
-                if let receivedAccounts = response["accounts"] as? [AccountDTOProtocol] {
+                let receivedAccounts = NSKeyedUnarchiver.unarchiveObject(with: response["accounts"] as! Data)
+                if let receivedAccounts = receivedAccounts as? [AccountDTOProtocol] {
                     strongSelf.accounts = receivedAccounts
                     
                     DispatchQueue.main.async {
@@ -72,8 +78,6 @@ class AccountsInterfaceController: WKInterfaceController {
             self.wcSession = WCSession.default()
             self.wcSession.delegate = self
             self.wcSession.activate()
-            
-            self.isWCSessionActivated = true
         }
     }
 }
@@ -81,6 +85,13 @@ class AccountsInterfaceController: WKInterfaceController {
 extension AccountsInterfaceController: WCSessionDelegate {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        DispatchQueue.main.async {
+            self.isWCSessionActivated = true
+            
+            if self.shouldFetchAccounts {
+                self.fetchAccounts()
+            }
+        }
     }
 
 }
