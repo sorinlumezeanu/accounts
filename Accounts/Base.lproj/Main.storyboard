@@ -26,12 +26,13 @@
                                             <segment title="All Accounts"/>
                                             <segment title="Visible Accounts"/>
                                         </segments>
+                                        <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="filterValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NT2-7m-M5m"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" red="0.53542935849999995" green="0.60557562109999996" blue="0.80148005489999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1524384469" green="0.22041973470000001" blue="0.29593729969999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="smD-ct-VFt" firstAttribute="centerX" secondItem="cly-Yk-FD5" secondAttribute="centerX" id="4ns-Gq-oa7"/>
                                     <constraint firstItem="smD-ct-VFt" firstAttribute="top" secondItem="cly-Yk-FD5" secondAttribute="top" constant="20" symbolic="YES" id="Bte-S6-jjI"/>
@@ -40,7 +41,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cDW-yc-u8m">
                                 <rect key="frame" x="0.0" y="132" width="375" height="535"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.68323034049999998" green="0.70962250230000001" blue="0.72788178920000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -30,6 +30,9 @@ class AccountListViewController: UIViewController {
         self.accountsTableView.dataSource = self
         self.accountsTableView.delegate = self
         
+        // prevent empty rows from showing when there's not enought data
+        self.accountsTableView.tableFooterView = UIView()
+        
         self.viewModel.startFetchingData()
     }
     
