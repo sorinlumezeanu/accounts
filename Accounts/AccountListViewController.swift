@@ -12,7 +12,7 @@ class AccountListViewController: UIViewController {
  
     @IBOutlet weak var accountsTableView: UITableView!
     
-    private var viewModel: AccountListViewModel!
+    fileprivate var viewModel: AccountListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
