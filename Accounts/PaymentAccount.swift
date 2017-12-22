@@ -6,13 +6,14 @@
 //  Copyright © 2017 Sorin Lumezeanu. All rights reserved.
 //
 
-import Foundation
+//import Foundation
+//
+//class PaymentAccount: AccountBase, Account {
+//    
+//    var type: AccountType {
+//        get {
+//            return .payment
+//        }
+//    }    
+//}
 
-class PaymentAccount: AccountBase, Account {
-    
-    var type: AccountType {
-        get {
-            return .payment
-        }
-    }    
-}

@@ -6,19 +6,20 @@
 //  Copyright © 2017 Sorin Lumezeanu. All rights reserved.
 //
 
-import Foundation
+//import Foundation
+//
+//class SavingsAccount: AccountBase, Account {
+//    
+//    var type: AccountType {
+//        get {
+//            return .savings
+//        }
+//    }
+//    
+//    var product: Product?
+//    var linkedAccount: Account?
+//    
+//    var targetAmountInCents: Int?
+//    var isSavingsTargetReached: Bool?
+//}
 
-class SavingsAccount: AccountBase, Account {
-    
-    var type: AccountType {
-        get {
-            return .savings
-        }
-    }
-    
-    var product: Product?
-    var linkedAccount: Account?
-    
-    var targetAmountInCents: Int?
-    var isSavingsTargetReached: Bool?
-}

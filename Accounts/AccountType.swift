@@ -8,10 +8,11 @@
 
 import Foundation
 
-enum AccountType: CustomStringConvertible {
-    case payment
-    case savings
-    case creditCard
+enum AccountType: String, CustomStringConvertible {
+    
+    case payment = "PAYMENT"
+    case savings = "SAVING"
+    case creditCard = "CREDITCARD"
     
     static let allValues: [AccountType] = [.payment, .savings, .creditCard]
     
@@ -26,5 +27,17 @@ enum AccountType: CustomStringConvertible {
                 return "Credit Card"
             }
         }
+    }
+    
+    static func failedAccountTypes(fromServerResponseString serverResponseString: String) -> [AccountType]? {
+        //  we'd have to know more about how the server response string is structured in order to do some real parsing
+        //  the available exmple is quite brief:
+        //      failedAccountTypes = “CREDITCARDS";
+        
+        if serverResponseString.contains("CREDITCARDS") {
+            return [.creditCard]
+        }
+        
+        return nil
     }
 }

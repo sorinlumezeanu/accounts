@@ -31,6 +31,7 @@
 		FF7E3B811FEB992000081E5B /* PaymentAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B801FEB992000081E5B /* PaymentAccount.swift */; };
 		FF7E3B831FEB992B00081E5B /* SavingsAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */; };
 		FF7E3B851FEB993500081E5B /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */; };
+		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
 		FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
 		FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
@@ -146,6 +147,7 @@
 		FF7E3B801FEB992000081E5B /* PaymentAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAccount.swift; sourceTree = "<group>"; };
 		FF7E3B821FEB992B00081E5B /* SavingsAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsAccount.swift; sourceTree = "<group>"; };
 		FF7E3B841FEB993500081E5B /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
+		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
 		FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FFCFE0DE1FEB9BAF00022493 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -367,7 +369,6 @@
 			children = (
 				FF7E3B7D1FEB98F000081E5B /* Product */,
 				FF7E3B7C1FEB98E500081E5B /* Account */,
-				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,6 +376,7 @@
 		FF7E3B7C1FEB98E500081E5B /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
 				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
 				FF7E3B7E1FEB990900081E5B /* AccountBase.swift */,
@@ -472,6 +474,7 @@
 		FFD687621FEC7E4400E0A464 /* DataService */ = {
 			isa = PBXGroup;
 			children = (
+				FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */,
 				FFD687631FEC7E6500E0A464 /* DataServiceProtocol.swift */,
 				FFD6875E1FEBF4FB00E0A464 /* FileDataService.swift */,
 				FFD687651FEC809700E0A464 /* JSONConverter.swift */,
@@ -781,6 +784,7 @@
 				FFCFE0E81FEBA58B00022493 /* AccountListViewModel.swift in Sources */,
 				FFCFE0ED1FEBCBA900022493 /* StandardErrorCell.swift in Sources */,
 				FFD6875F1FEBF4FB00E0A464 /* FileDataService.swift in Sources */,
+				FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */,
 				FFD687441FEBD40A00E0A464 /* DataLoadingCell.swift in Sources */,
 				FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */,
 			);

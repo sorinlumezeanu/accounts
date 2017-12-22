@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 class FileDataService: DataServiceProtocol {
     
@@ -23,14 +24,8 @@ class FileDataService: DataServiceProtocol {
             return
         }
         
-        // TBD: JSON > object model
-        guard let jsonData = jsonContent.data(using: .utf8) else {
-            return
-        }
-        
-        guard let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: []) else {
-            return
-        }
+
+        let response = Mapper<FetchAccountsResponse>().map(JSONString: jsonContent)
         
         completion(nil, nil)
     }
@@ -42,4 +37,33 @@ class FileDataService: DataServiceProtocol {
     }
 }
 
+
+class FetchAccountsResponse: Mappable {
+    
+    var accounts: [Account]?
+    var failedAccountTypes: [AccountType]?
+    var returnCode: HTTPStatusCode?
+    
+    public required init?(map: Map) {
+    }
+
+    func mapping(map: Map) {
+        // accounts
+        self.accounts <- map["accounts"]
+        
+        // failed account types
+        var failedAccountTypesString: String?
+        failedAccountTypesString <- map["failedAccountTypes"]
+        if let failedAccountTypesString = failedAccountTypesString {
+            self.failedAccountTypes = AccountType.failedAccountTypes(fromServerResponseString: failedAccountTypesString)
+        }
+        
+        // server return code (interprete as standard HTTP status code)
+        var returnCodeString: String?
+        returnCodeString <- map["returnCode"]
+        if let returnCodeString = returnCodeString {
+            self.returnCode = HTTPStatusCode.make(fromServerReturnCode: returnCodeString)
+        }
+    }
+}
 

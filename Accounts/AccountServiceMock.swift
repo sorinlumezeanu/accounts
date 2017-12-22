@@ -20,7 +20,8 @@ class AccountServiceMock: AccountServiceProtocol {
         
         var paymentAccounts = [Account]()
         
-        var paymentAccount = PaymentAccount()
+        var paymentAccount = Account()
+        paymentAccount.type = .payment
         paymentAccount.id = 748757694
         paymentAccount.name = "Hr P L G N StellingTD"
         paymentAccount.number = "\(748757694)"
@@ -30,7 +31,8 @@ class AccountServiceMock: AccountServiceProtocol {
         paymentAccount.iban = "NL23INGB0748757694"
         paymentAccounts.append(paymentAccount)
         
-        paymentAccount = PaymentAccount()
+        paymentAccount = Account()
+        paymentAccount.type = .payment
         paymentAccount.id = 700000027559
         paymentAccount.name = ","
         paymentAccount.number = "\(748757732)"
@@ -45,7 +47,8 @@ class AccountServiceMock: AccountServiceProtocol {
             : paymentAccounts
         accountsByType[.payment] = AccountsResponse(accounts: filteredPaymentAccounts, error: nil)
 
-        let savingsAccount = SavingsAccount()
+        let savingsAccount = Account()
+        savingsAccount.type = .savings
         savingsAccount.id = 700000027559
         savingsAccount.name = nil
         savingsAccount.number = "H 177-27066"
