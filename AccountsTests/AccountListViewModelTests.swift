@@ -125,6 +125,8 @@ class AccountListViewModelTests: XCTestCase {
 extension AccountListViewModelTests {
     
     class AccountServiceMock: AccountServiceProtocol {
+        func fetchAccountDTOs(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping ([AccountDTOProtocol]?, Error?) -> Void) {
+        }
         
         func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: ApplicationError?) -> Void) {
             completion(AccountType.allValues, nil)
@@ -192,4 +194,9 @@ extension AccountListViewModelTests {
             completion(AccountsByTypeResponse(accountsByType: accountsByType, error: nil))
         }
     }
+    
+    func fetchAccountDTOs(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [AccountDTOProtocol]?, _ error: Error?) -> Void) {
+        
+    }
+
 }

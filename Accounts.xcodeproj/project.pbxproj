@@ -25,6 +25,7 @@
 		FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B761FEB8F3300081E5B /* AccountType.swift */; };
 		FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
 		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
+		FFBF81441FED5D76005AAE10 /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016911FED4D1500100FAA /* AccountDTO.swift */; };
 		FFC016791FED2CA800100FAA /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC016781FED2CA800100FAA /* AccountDetailsViewController.swift */; };
 		FFC0167B1FED2CB500100FAA /* AccountDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0167A1FED2CB500100FAA /* AccountDetailsViewModel.swift */; };
 		FFC0167E1FED43A300100FAA /* AccountsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0167D1FED43A300100FAA /* AccountsInterfaceController.swift */; };
@@ -890,6 +891,7 @@
 				FFDF1EBF1FED0C14004861F1 /* FetchAccountsResponse.swift in Sources */,
 				FFDF1EBC1FED0C0C004861F1 /* HTTPStatusCode.swift in Sources */,
 				FFDF1EBB1FED0C02004861F1 /* AccountService.swift in Sources */,
+				FFBF81441FED5D76005AAE10 /* AccountDTO.swift in Sources */,
 				FFDF1EB71FED0BF4004861F1 /* ServiceProvider.swift in Sources */,
 				FFDF1EB61FED0BF1004861F1 /* Service.swift in Sources */,
 				FFDF1EB81FED0BF7004861F1 /* DataServiceProtocol.swift in Sources */,

@@ -6,24 +6,36 @@
 //  Copyright © 2017 Sorin Lumezeanu. All rights reserved.
 //
 
-import WatchKit
 import Foundation
+import WatchKit
+import WatchConnectivity
 
 class AccountsInterfaceController: WKInterfaceController {
+    
+    var wcSession: WCSession!
     
     @IBOutlet var accountsTable: WKInterfaceTable!
 
     var accounts: [AccountDTOProtocol] = []
     
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        self.accounts = self.mock()
+        if WCSession.isSupported() {
+            self.wcSession = WCSession.default()
+            self.wcSession.delegate = self
+            self.wcSession.activate()
+        }
+        
+        self.fetchAccounts()
+    }
+    
+    func updateUI() {
         self.accountsTable.setNumberOfRows(accounts.count, withRowType: "AccountRow")
         
         for index in 0 ..< accountsTable.numberOfRows {
-            guard let rowController = self.accountsTable.rowController(at: index) as? AccountRowController else { continue }
-            
+            guard let rowController = self.accountsTable.rowController(at: index) as? AccountRowController else { continue }            
             rowController.account = self.accounts[index]
         }
     }
@@ -33,16 +45,30 @@ class AccountsInterfaceController: WKInterfaceController {
         self.presentController(withName: "Account", context: account)
     }
     
-    func mock() -> [AccountDTO] {
-        var a1 = AccountDTO()
-        a1.number = "unu"
-        a1.balanceInCents = 10000
+    func fetchAccounts() {
+        guard let wcSession = self.wcSession else { return }
         
-        var a2 = AccountDTO()
-        a2.number = "doi"
-        a2.balanceInCents = 20000
-        
-        return [a1, a2, a1, a2, a1, a2, a1, a2]
-
+        let message: [String: Any] = ["message": "fetchAccounts"]
+        wcSession.sendMessage(message, replyHandler: { [weak self] (response) in
+            if let strongSelf = self {
+                if let receivedAccounts = response["accounts"] as? [AccountDTOProtocol] {
+                    strongSelf.accounts = receivedAccounts
+                    
+                    DispatchQueue.main.async {
+                        strongSelf.updateUI()
+                    }
+                }
+            }
+        }) { (error) in
+            print(error)
+        }
     }
+    
+}
+
+extension AccountsInterfaceController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+
 }

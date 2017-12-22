@@ -14,4 +14,6 @@ typealias AccountsByTypeResponse = (accountsByType: [AccountType: AccountsRespon
 protocol AccountServiceProtocol: Service {
     func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: ApplicationError?) -> Void)
     func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void)
+    
+    func fetchAccountDTOs(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [AccountDTOProtocol]?, _ error: Error?) -> Void)
 }

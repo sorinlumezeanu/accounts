@@ -47,6 +47,41 @@ class AccountService: AccountServiceProtocol {
         }
     }
     
+    func fetchAccountDTOs(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ accounts: [AccountDTOProtocol]?, _ error: Error?) -> Void) {
+        
+        let dataService: DataServiceProtocol = ServiceProvider.resolve()
+        dataService.fetchAccounts { [weak self] (response, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                guard let response = response else {
+                    completion(nil, error)
+                    return
+                }
+                
+                if let filteredResponse = self?.applyFetchingOptions(fetchingOptions, onFetchAccountsResponse: response) {
+                    if let accounts = filteredResponse.accounts {
+                        let accountDTOs: [AccountDTOProtocol] = accounts.map {
+                            let accountDTO = AccountDTO()
+                            accountDTO.type = $0.type
+                            accountDTO.id = $0.id
+                            accountDTO.number = $0.number
+                            accountDTO.balanceInCents = $0.balanceInCents
+                            accountDTO.currency = $0.currency
+                            accountDTO.type = $0.type
+                            return accountDTO
+                        }
+                        completion(accountDTOs, nil)
+                    }
+                }
+                
+                completion(nil, ApplicationError.invalidDatasource)
+            }
+        }
+        
+    }
+
+    
     private func aggregateAccounts(fromFetchAccountsResponse response: FetchAccountsResponse) -> [AccountType: AccountsResponse]? {
         guard let accounts = response.accounts else { return [:] }
 
