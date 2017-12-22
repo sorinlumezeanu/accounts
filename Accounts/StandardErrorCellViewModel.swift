@@ -18,7 +18,7 @@ class StandardErrorCellViewModel {
     
     var errorMessage: String? {
         get {
-            return self.error.localizedDescription
+            return String(describing: self.error)
         }
     }
 }
