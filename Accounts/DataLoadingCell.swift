@@ -22,6 +22,7 @@ class DataLoadingCell: UITableViewCell {
         self.viewModel = viewModel
         
         self.loadingMessageLabel.text = self.viewModel.loadingMessage
+        self.activityIndicator.startAnimating()
     }
     
     override func prepareForReuse() {

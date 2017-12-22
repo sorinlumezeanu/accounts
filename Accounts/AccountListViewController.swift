@@ -56,19 +56,27 @@ class AccountListViewController: UIViewController {
 extension AccountListViewController: AccountListViewModelDelegate {
     
     func didReceiveAccountTypes(_ accountTypes: [AccountType]) {
-        self.accountsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.accountsTableView.reloadData()
+        }
     }
     
     func fetchAccountTypesDidFinishWithError(_ error: Error?) {
-        self.accountsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.accountsTableView.reloadData()
+        }
     }
     
     func didReceiveAccounts(_ accountsByType: [AccountType: AccountsResponse]) {
-        self.accountsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.accountsTableView.reloadData()
+        }
     }
     
     func fetchAccountsDidFinishWithError(_ error: Error?) {
-        self.accountsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.accountsTableView.reloadData()
+        }
     }
 
 }

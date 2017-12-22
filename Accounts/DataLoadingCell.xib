@@ -21,8 +21,8 @@
                         <rect key="frame" x="177" y="11" width="20" height="20"/>
                     </activityIndicatorView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-HQ-3eX">
-                        <rect key="frame" x="8" y="11" width="161" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="13" width="149" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -32,7 +32,7 @@
                     <constraint firstItem="Kna-zp-f9z" firstAttribute="centerX" secondItem="YFU-Mb-CwE" secondAttribute="centerX" id="N9J-oc-cIB"/>
                     <constraint firstItem="W6Q-HQ-3eX" firstAttribute="centerY" secondItem="YFU-Mb-CwE" secondAttribute="centerY" id="XHb-5h-Fve"/>
                     <constraint firstItem="Kna-zp-f9z" firstAttribute="centerY" secondItem="YFU-Mb-CwE" secondAttribute="centerY" id="XUN-uj-Y93"/>
-                    <constraint firstItem="W6Q-HQ-3eX" firstAttribute="leading" secondItem="YFU-Mb-CwE" secondAttribute="leading" constant="8" id="eMV-oL-xCO"/>
+                    <constraint firstItem="W6Q-HQ-3eX" firstAttribute="leading" secondItem="YFU-Mb-CwE" secondAttribute="leading" constant="20" symbolic="YES" id="eMV-oL-xCO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

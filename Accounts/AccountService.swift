@@ -10,29 +10,39 @@ import Foundation
 
 class AccountService: AccountServiceProtocol {
     
+    private struct Constants {
+        static let SimulatedLatencyDelaySeconds = 0.3       // simulate latency
+    }
+    
     func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: ApplicationError?) -> Void) {
-        completion(AccountType.allValues, nil)
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + Constants.SimulatedLatencyDelaySeconds) {
+            completion(AccountType.allValues, nil)
+        }
     }
     
     func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
-        let dataService: DataServiceProtocol = ServiceProvider.resolve()
-        dataService.fetchAccounts { [weak self] (response, error) in
-            if let error = error {
-                completion((accountsByType: nil, error: error))
-            } else {
-                guard let response = response else {
-                    completion((accountsByType: nil, error: .invalidDatasource))
-                    return
-                }
-                
-                if let filteredResponse = self?.applyFetchingOptions(fetchingOptions, onFetchAccountsResponse: response) {
-                    if let accountsByType = self?.aggregateAccounts(fromFetchAccountsResponse: filteredResponse) {
-                        completion((accountsByType: accountsByType, error: nil))
+        
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + Constants.SimulatedLatencyDelaySeconds) {
+            
+            let dataService: DataServiceProtocol = ServiceProvider.resolve()
+            dataService.fetchAccounts { [weak self] (response, error) in
+                if let error = error {
+                    completion((accountsByType: nil, error: error))
+                } else {
+                    guard let response = response else {
+                        completion((accountsByType: nil, error: .invalidDatasource))
                         return
                     }
+                    
+                    if let filteredResponse = self?.applyFetchingOptions(fetchingOptions, onFetchAccountsResponse: response) {
+                        if let accountsByType = self?.aggregateAccounts(fromFetchAccountsResponse: filteredResponse) {
+                            completion((accountsByType: accountsByType, error: nil))
+                            return
+                        }
+                    }
+                    
+                    completion((accountsByType: nil, error: .invalidDatasource))
                 }
-                
-                completion((accountsByType: nil, error: .invalidDatasource))
             }
         }
     }
