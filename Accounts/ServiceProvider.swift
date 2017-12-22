@@ -39,7 +39,8 @@ public final class ServiceProvider {
     static func addDefaultResolvers() {
         ServiceProvider.clearResolvers()
         
-        ServiceProvider.register { AccountServiceMock() as AccountServiceProtocol }
+        ServiceProvider.register { FileDataService() as DataServiceProtocol }
+        ServiceProvider.register { AccountService() as AccountServiceProtocol }
     }
     
     public static func clearResolvers() {

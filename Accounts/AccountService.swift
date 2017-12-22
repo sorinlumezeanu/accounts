@@ -15,6 +15,10 @@ class AccountService: AccountServiceProtocol {
     }
     
     func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
-        fatalError("not implemented")
+        let parser = Parser(withBundledFileName: "Datasource")
+        parser.parse()
+        
+        let response: AccountsByTypeResponse = (accountsByType: nil, error: nil)
+        completion(response)
     }
 }

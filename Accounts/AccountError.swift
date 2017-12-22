@@ -8,7 +8,21 @@
 
 import Foundation
 
-enum AccountError: Error {
+enum AccountError: Error, CustomStringConvertible {
+    case datasourceNotFound
+    case invalidDatasourceResponse
     case unknown
-    case someError
+    
+    var description: String {
+        get {
+            switch self {
+            case .datasourceNotFound:
+                return "Datasource not found."
+            case .invalidDatasourceResponse:
+                return "Invalid datasource response."
+            case .unknown:
+                return "Unknown error."
+            }
+        }
+    }
 }
