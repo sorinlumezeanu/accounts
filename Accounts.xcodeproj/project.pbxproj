@@ -45,7 +45,7 @@
 		FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687471FEBD51D00E0A464 /* AccountCell.swift */; };
 		FFD6874A1FEBD56A00E0A464 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD687491FEBD56A00E0A464 /* AccountCell.xib */; };
 		FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */; };
-		FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */; };
+		FFD6874E1FEBDFAB00E0A464 /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD6874D1FEBDFAB00E0A464 /* ApplicationError.swift */; };
 		FFD687511FEBE1AB00E0A464 /* NoResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687501FEBE1AB00E0A464 /* NoResultsCell.swift */; };
 		FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687521FEBE1EC00E0A464 /* NoResultsCellViewModel.swift */; };
 		FFD687551FEBE23300E0A464 /* NoResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD687541FEBE23300E0A464 /* NoResultsCell.xib */; };
@@ -158,7 +158,7 @@
 		FFD687471FEBD51D00E0A464 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		FFD687491FEBD56A00E0A464 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		FFD6874B1FEBD5D100E0A464 /* AccountCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellViewModel.swift; sourceTree = "<group>"; };
-		FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountError.swift; sourceTree = "<group>"; };
+		FFD6874D1FEBDFAB00E0A464 /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
 		FFD687501FEBE1AB00E0A464 /* NoResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsCell.swift; sourceTree = "<group>"; };
 		FFD687521FEBE1EC00E0A464 /* NoResultsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsCellViewModel.swift; sourceTree = "<group>"; };
 		FFD687541FEBE23300E0A464 /* NoResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultsCell.xib; sourceTree = "<group>"; };
@@ -362,7 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */,
-				FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */,
+				FFD6874D1FEBDFAB00E0A464 /* ApplicationError.swift */,
 				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 				FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */,
 				FF7E3B7D1FEB98F000081E5B /* Product */,
@@ -765,7 +765,7 @@
 				FFD687591FEBE3B000E0A464 /* AccountTypeHeaderViewModel.swift in Sources */,
 				FFCFE0F11FEBCCBA00022493 /* StandardErrorCellViewModel.swift in Sources */,
 				FFCFE0E31FEB9C4B00022493 /* AccountServiceMock.swift in Sources */,
-				FFD6874E1FEBDFAB00E0A464 /* AccountError.swift in Sources */,
+				FFD6874E1FEBDFAB00E0A464 /* ApplicationError.swift in Sources */,
 				FFD687641FEC7E6500E0A464 /* DataServiceProtocol.swift in Sources */,
 				FFD687481FEBD51D00E0A464 /* AccountCell.swift in Sources */,
 				FFD687531FEBE1EC00E0A464 /* NoResultsCellViewModel.swift in Sources */,

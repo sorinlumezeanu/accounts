@@ -13,7 +13,7 @@ class FileDataService: DataServiceProtocol {
     
     private static let bundledDatasourceFileName = "Datasource"
     
-    func fetchAccounts(completion: @escaping (_ accounts: [Account]?, _ error: AccountError?) -> Void) {
+    func fetchAccounts(completion: @escaping (_ accounts: [Account]?, _ error: ApplicationError?) -> Void) {
         guard let fileContent = self.loadBundledFile() else {
             completion(nil, .datasourceNotFound)
             return

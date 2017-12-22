@@ -10,7 +10,7 @@ import Foundation
 
 class AccountService: AccountServiceProtocol {
     
-    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: AccountError?) -> Void) {
+    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: ApplicationError?) -> Void) {
         completion(AccountType.allValues, nil)
     }
     

@@ -149,7 +149,7 @@ class AccountListViewModel {
                 if let error = accountsResponseForGivenType.error {
                     return .error(error: error)
                 } else {
-                    return .error(error: AccountError.unknown)
+                    return .error(error: ApplicationError.unknown)
                 }
             }
         }

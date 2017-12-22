@@ -1,5 +1,5 @@
 //
-//  AccountError.swift
+//  ApplicationError.swift
 //  Accounts
 //
 //  Created by Sorin Lumezeanu on 21/12/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AccountError: Error, CustomStringConvertible {
+enum ApplicationError: Error, CustomStringConvertible {
     case datasourceNotFound
     case invalidDatasourceResponse
     case unknown

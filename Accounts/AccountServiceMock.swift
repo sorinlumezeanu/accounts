@@ -10,7 +10,7 @@ import Foundation
 
 class AccountServiceMock: AccountServiceProtocol {
     
-    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: AccountError?) -> Void) {
+    func fetchAccountTypes(completion: @escaping (_ accountTypes: [AccountType]?, _ error: ApplicationError?) -> Void) {
         completion(AccountType.allValues, nil)
     }
     
@@ -71,7 +71,7 @@ class AccountServiceMock: AccountServiceProtocol {
         accountsByType[.savings] = AccountsResponse(accounts: filteredSavingsAccount, error: nil)
         
         
-        accountsByType[.creditCard] = AccountsResponse(accounts: nil, error: AccountError.unknown)
+        accountsByType[.creditCard] = AccountsResponse(accounts: nil, error: ApplicationError.unknown)
         
         completion(AccountsByTypeResponse(accountsByType: accountsByType, error: nil))
     }
