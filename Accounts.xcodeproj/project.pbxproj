@@ -28,6 +28,7 @@
 		FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B781FEB906700081E5B /* ProductType.swift */; };
 		FF7E3B7B1FEB90FD00081E5B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7E3B7A1FEB90FD00081E5B /* Product.swift */; };
 		FFC5C6B61FECE043007C50BF /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */; };
+		FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */; };
 		FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */; };
 		FFCFE0DD1FEB9AFF00022493 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */; };
 		FFCFE0DF1FEB9BAF00022493 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCFE0DE1FEB9BAF00022493 /* Service.swift */; };
@@ -140,6 +141,7 @@
 		FF7E3B781FEB906700081E5B /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		FF7E3B7A1FEB90FD00081E5B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccountsResponse.swift; sourceTree = "<group>"; };
 		FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
 		FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		FFCFE0DE1FEB9BAF00022493 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -359,6 +361,10 @@
 		FF7E3B711FEB88AE00081E5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */,
+				FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */,
+				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
+				FFC5C6B71FECECCA007C50BF /* FetchAccountsResponse.swift */,
 				FF7E3B7D1FEB98F000081E5B /* Product */,
 				FF7E3B7C1FEB98E500081E5B /* Account */,
 			);
@@ -368,7 +374,6 @@
 		FF7E3B7C1FEB98E500081E5B /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				FF7E3B721FEB8EA800081E5B /* Currency.swift */,
 				FF7E3B761FEB8F3300081E5B /* AccountType.swift */,
 				FF7E3B741FEB8ECC00081E5B /* Account.swift */,
 			);
@@ -387,7 +392,6 @@
 		FFCFE0D91FEB9ABC00022493 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				FFD6874D1FEBDFAB00E0A464 /* AccountError.swift */,
 				FFCFE0E91FEBA72300022493 /* AccountFetchingOptions.swift */,
 				FFCFE0DA1FEB9AEE00022493 /* AccountServiceProtocol.swift */,
 				FFCFE0DC1FEB9AFF00022493 /* AccountService.swift */,
@@ -462,7 +466,6 @@
 		FFD687621FEC7E4400E0A464 /* DataService */ = {
 			isa = PBXGroup;
 			children = (
-				FFC5C6B51FECE043007C50BF /* HTTPStatusCode.swift */,
 				FFD687631FEC7E6500E0A464 /* DataServiceProtocol.swift */,
 				FFD6875E1FEBF4FB00E0A464 /* FileDataService.swift */,
 				FFD687651FEC809700E0A464 /* JSONConverter.swift */,
@@ -755,6 +758,7 @@
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
 				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
+				FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */,
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
 				FF7E3B791FEB906700081E5B /* ProductType.swift in Sources */,
 				FFCFE0DB1FEB9AEE00022493 /* AccountServiceProtocol.swift in Sources */,
