@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataServiceProtocol: Service {
-    func fetchAccounts(completion: @escaping (_ accounts: [Account]?, _ error: ApplicationError?) -> Void)    
+    func fetchAccounts(completion: @escaping (_ response: FetchAccountsResponse?, _ error: ApplicationError?) -> Void)
 }

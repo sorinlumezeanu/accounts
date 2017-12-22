@@ -13,21 +13,29 @@ class FileDataService: DataServiceProtocol {
     
     private static let bundledDatasourceFileName = "Datasource"
     
-    func fetchAccounts(completion: @escaping (_ accounts: [Account]?, _ error: ApplicationError?) -> Void) {
+    func fetchAccounts(completion: @escaping (_ response: FetchAccountsResponse?, _ error: ApplicationError?) -> Void) {
         guard let fileContent = self.loadBundledFile() else {
             completion(nil, .datasourceNotFound)
             return
         }
-        
         guard let jsonContent = JSONConverter().json(from: fileContent) else {
-            completion(nil, .invalidDatasourceResponse)
+            completion(nil, .invalidDatasource)
             return
         }
-        
+        guard let fetchAccountsResponse = Mapper<FetchAccountsResponse>().map(JSONString: jsonContent) else {
+            completion(nil, .invalidDatasource)
+            return
+        }
+        guard let returnCode = fetchAccountsResponse.returnCode else {
+            completion(nil, .invalidDatasource)     // the return code must always be present in the response, regardles of the actual code value
+            return
+        }
+        guard returnCode == .ok else {
+            completion(nil, .httpError(httpStatusCode: returnCode))
+            return
+        }
 
-        let response = Mapper<FetchAccountsResponse>().map(JSONString: jsonContent)
-        
-        completion(nil, nil)
+        completion(fetchAccountsResponse, nil)
     }
     
     private func loadBundledFile() -> String? {

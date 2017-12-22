@@ -10,7 +10,9 @@ import Foundation
 
 enum ApplicationError: Error, CustomStringConvertible {
     case datasourceNotFound
-    case invalidDatasourceResponse
+    case invalidDatasource
+    case httpError(httpStatusCode: HTTPStatusCode)
+    case failedAccountType(accountType: AccountType)    
     case unknown
     
     var description: String {
@@ -18,8 +20,12 @@ enum ApplicationError: Error, CustomStringConvertible {
             switch self {
             case .datasourceNotFound:
                 return "Datasource not found."
-            case .invalidDatasourceResponse:
-                return "Invalid datasource response."
+            case .invalidDatasource:
+                return "Invalid datasource."
+            case .httpError(let httpStatusCode):
+                return "HTTP error: \(httpStatusCode)"
+            case .failedAccountType(let accountType):
+                return "Failed to retrieve data for account type: \(accountType)"
             case .unknown:
                 return "Unknown error."
             }

@@ -16,7 +16,7 @@ class AccountService: AccountServiceProtocol {
     
     func fetchAccounts(withOptions fetchingOptions: AccountFetchingOptions, completion: @escaping (_ response: AccountsByTypeResponse) -> Void) {
         let dataService: DataServiceProtocol = ServiceProvider.resolve()
-        dataService.fetchAccounts { (accounts, error) in
+        dataService.fetchAccounts { (response, error) in
             let response: AccountsByTypeResponse = (accountsByType: nil, error: nil)
             completion(response)
         }        

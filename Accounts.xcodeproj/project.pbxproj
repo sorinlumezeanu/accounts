@@ -305,10 +305,10 @@
 		FF57CD721FEB8825008B5D04 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FFD687621FEC7E4400E0A464 /* DataService */,
-				FFCFE0D91FEB9ABC00022493 /* Account */,
 				FFCFE0DE1FEB9BAF00022493 /* Service.swift */,
 				FFCFE0E01FEB9BC900022493 /* ServiceProvider.swift */,
+				FFD687621FEC7E4400E0A464 /* DataService */,
+				FFCFE0D91FEB9ABC00022493 /* Account */,
 			);
 			name = Services;
 			sourceTree = "<group>";
