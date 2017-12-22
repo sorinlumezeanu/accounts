@@ -57,6 +57,9 @@
 		FFD687611FEBF7C500E0A464 /* Datasource.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFD687601FEBF61000E0A464 /* Datasource.txt */; };
 		FFD687641FEC7E6500E0A464 /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687631FEC7E6500E0A464 /* DataServiceProtocol.swift */; };
 		FFD687661FEC809700E0A464 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD687651FEC809700E0A464 /* JSONConverter.swift */; };
+		FFDF1EAD1FED0A2C004861F1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EAC1FED0A2C004861F1 /* main.swift */; };
+		FFDF1EB01FED0A80004861F1 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */; };
+		FFDF1EB21FED0A99004861F1 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDF1EB11FED0A99004861F1 /* Testing.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +173,9 @@
 		FFD687601FEBF61000E0A464 /* Datasource.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Datasource.txt; sourceTree = "<group>"; };
 		FFD687631FEC7E6500E0A464 /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		FFD687651FEC809700E0A464 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
+		FFDF1EAC1FED0A2C004861F1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
+		FFDF1EB11FED0A99004861F1 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +269,7 @@
 		FF57CD3D1FEB86DD008B5D04 /* AccountsTests */ = {
 			isa = PBXGroup;
 			children = (
+				FFDF1EAE1FED0A70004861F1 /* Auxiliary */,
 				FF57CD3E1FEB86DD008B5D04 /* AccountsTests.swift */,
 				FF57CD401FEB86DD008B5D04 /* Info.plist */,
 			);
@@ -295,9 +302,10 @@
 		FF57CD711FEB8819008B5D04 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */,
+				FFDF1EAC1FED0A2C004861F1 /* main.swift */,
 				FF57CD731FEB882D008B5D04 /* Resources */,
 				FF57CD721FEB8825008B5D04 /* Services */,
-				FF57CD291FEB86DD008B5D04 /* AppDelegate.swift */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -473,6 +481,15 @@
 			name = DataService;
 			sourceTree = "<group>";
 		};
+		FFDF1EAE1FED0A70004861F1 /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF1EAF1FED0A80004861F1 /* TestingAppDelegate.swift */,
+				FFDF1EB11FED0A99004861F1 /* Testing.storyboard */,
+			);
+			name = Auxiliary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -625,6 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDF1EB21FED0A99004861F1 /* Testing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +775,7 @@
 				FFD6874C1FEBD5D100E0A464 /* AccountCellViewModel.swift in Sources */,
 				FFCFE0EA1FEBA72300022493 /* AccountFetchingOptions.swift in Sources */,
 				FF57CD2A1FEB86DD008B5D04 /* AppDelegate.swift in Sources */,
+				FFDF1EAD1FED0A2C004861F1 /* main.swift in Sources */,
 				FFCFE0E11FEB9BC900022493 /* ServiceProvider.swift in Sources */,
 				FFC5C6B81FECECCA007C50BF /* FetchAccountsResponse.swift in Sources */,
 				FF7E3B771FEB8F3300081E5B /* AccountType.swift in Sources */,
@@ -783,6 +802,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF57CD3F1FEB86DD008B5D04 /* AccountsTests.swift in Sources */,
+				FFDF1EB01FED0A80004861F1 /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
