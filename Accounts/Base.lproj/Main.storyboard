@@ -31,21 +31,11 @@
                                             <action selector="filterValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NT2-7m-M5m"/>
                                         </connections>
                                     </segmentedControl>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6T-9X-fDK">
-                                        <rect key="frame" x="0.0" y="67" width="375" height="1"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Jwf-QO-UqI"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1524384469" green="0.22041973470000001" blue="0.29593729969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.1278280467" green="0.1808294356" blue="0.2424596399" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="smD-ct-VFt" firstAttribute="centerX" secondItem="cly-Yk-FD5" secondAttribute="centerX" id="4ns-Gq-oa7"/>
                                     <constraint firstItem="smD-ct-VFt" firstAttribute="top" secondItem="cly-Yk-FD5" secondAttribute="top" constant="20" symbolic="YES" id="Bte-S6-jjI"/>
-                                    <constraint firstAttribute="bottom" secondItem="h6T-9X-fDK" secondAttribute="bottom" id="DPQ-tF-7Wp"/>
-                                    <constraint firstAttribute="trailing" secondItem="h6T-9X-fDK" secondAttribute="trailing" id="Fvn-VU-bH0"/>
-                                    <constraint firstItem="h6T-9X-fDK" firstAttribute="leading" secondItem="cly-Yk-FD5" secondAttribute="leading" id="j0R-0y-7aE"/>
                                     <constraint firstAttribute="height" constant="68" id="y57-h1-lxt"/>
                                 </constraints>
                             </view>
